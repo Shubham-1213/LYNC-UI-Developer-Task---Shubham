@@ -7,10 +7,12 @@ export default function ProductCard() {
       <div className="image-container">
         <img src={product_image} alt="product_image" />
       </div>
-      <div className="title-product">LYNC Wallet SDK</div>
-      <div className="description-product">
-        Empowering developers to integrate account abstraction in their game,
-        dapp, metaverse and more in minutes.
+      <div className="content-container-product">
+        <div className="title-product">LYNC Wallet SDK</div>
+        <div className="description-product">
+          Empowering developers to integrate account abstraction in their game,
+          dapp, metaverse and more in minutes.
+        </div>
       </div>
     </div>
   );

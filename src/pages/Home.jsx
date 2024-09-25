@@ -16,6 +16,48 @@ import diamond from "../assets/diamond.png";
 import console from "../assets/console.gif";
 import bgConsole from "../assets/Docscard.png";
 import secondGif from "../assets/secondGif.gif";
+import consoleBg from "../assets/consoleBg.png";
+import aptos from "../assets/APTOS.png";
+import astar from "../assets/astar.png";
+import avalanche from "../assets/avalanche.png";
+import ethereum from "../assets/ethereum.png";
+import polygon from "../assets/polygon.png";
+import saga from "../assets/saga.png";
+import zysync from "../assets/zySync.png";
+import shardeum from "../assets/shardeum.png";
+import MarqueeComponent from "../components/MarqueeComponent";
+import bgMarquee from "../assets/bg-marquee.png";
+import CustomCarousel from "../components/CustomCarousal";
+import ReviewCarousal from "../components/ReviewCarousal";
+import community from "../assets/community.png";
+import lyncLogo from "../assets/LYNCLogo.png";
+import Footer from "../components/Footer";
+import floorPattern from "../assets/floor-pattern.png";
+
+const brandImages1 = [
+  { src: "/src/assets/APTOS.png", alt: "Brand 1" },
+  { src: "/src/assets/astar.png", alt: "Brand 2" },
+  { src: "/src/assets/avalanche.png", alt: "Brand 3" },
+  { src: "/src/assets/ethereum.png", alt: "Brand 4" },
+];
+
+const brandImages2 = [
+  { src: "/src/assets/polygon.png", alt: "Brand 5" },
+  { src: "/src/assets/saga.png", alt: "Brand 6" },
+  { src: "/src/assets/zySync.png", alt: "Brand 7" },
+  { src: "/src/assets/shardeum.png", alt: "Brand 8" },
+];
+
+const partnersData = [
+  { name: "Filecoin", logo: "/src/assets/filecoin.png" },
+  { name: "Chainlink", logo: "/src/assets/chainlink.png" },
+  { name: "Spheron", logo: "/src/assets/spheron.png" },
+  { name: "LongHash X", logo: "/src/assets/sponser1.png" },
+  { name: "Axelar", logo: "/src/assets/sponser2.png" },
+  { name: "Biconomy", logo: "/src/assets/biconomy.png" },
+  { name: "Lighthouse", logo: "/src/assets/lighthouse.png" },
+  { name: "Saus", logo: "/src/assets/saus.png" },
+];
 export default function Home() {
   return (
     <>
@@ -345,17 +387,20 @@ export default function Home() {
           </div>
           <div className="stats-section">
             <div className="console-section">
+              <div className="bg-console">
+                <img src={bgConsole} alt="bgConsole" />
+              </div>
               <div className="left">
                 <div className="bold-heading">
                   <div>Elevate Your Gameplay </div>
                   <div>with Essential Insights!</div>
                 </div>
                 <div className="non-bold-text">
-                    <div>Unleash Your Potential - Explore </div>
-                    <div>the Knowledge Hub Today!</div>
+                  <div>Unleash Your Potential - Explore </div>
+                  <div>the Knowledge Hub Today!</div>
                 </div>
                 <div className="button-stats">
-                    <span>View Docs</span>
+                  <span>View Docs</span>
                 </div>
               </div>
               <div className="right">
@@ -376,13 +421,183 @@ export default function Home() {
               </div>
             </div>
             <div className="big-stat-container">
-                <span className="gradiant-two">500000+</span>
-                <div>Users ops created in 10</div>
-                <div>hours</div>
-                <div className="big-stat-gif">
-                    <img src={secondGif} alt="card" /> 
-                </div>
+              <span className="gradiant-two">500000+</span>
+              <div>Users ops created in 10</div>
+              <div>hours</div>
+              <div className="big-stat-gif">
+                <img src={secondGif} alt="card" />
+              </div>
             </div>
+          </div>
+          <div className="product-section">
+            <div className="product-title">
+              Product <span className="product-gradiant">Suite</span>
+            </div>
+            <div className="product-card-container">
+              <div className="line-one-product">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+              </div>
+              <div className="bg-product">
+                <svg
+                  width="1440"
+                  height="1387"
+                  viewBox="0 0 1440 1387"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_284_631)">
+                    <path
+                      d="M263.665 847.834C155.771 792.4 283.966 612.304 481.279 527.467C673.629 444.764 655.819 540.894 951.64 631.075C855.677 632.403 1305.27 879.921 1205.99 889.582C1106.71 899.244 735.851 857.72 632.993 855.854C530.135 853.988 371.56 903.267 263.665 847.834Z"
+                      fill="#6F00DD"
+                      fill-opacity="0.6"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_284_631"
+                      x="-271.398"
+                      y="0.150696"
+                      width="1987.6"
+                      height="1386.69"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="247.9"
+                        result="effect1_foregroundBlur_284_631"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+              <div className="line-two-product">
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+              </div>
+            </div>
+          </div>
+          <div className="marquee-section">
+            <div className="marquee-title">
+              <div>With LYNC build on your</div>
+              <div className="marquee-gradiant">favorite chain</div>
+            </div>
+            <div className="bg-marquee">
+              <img src={bgImageGaming} alt="bgMarquee" />
+            </div>
+            <div className="actual-marquee">
+              <div className="first-marquee">
+                <MarqueeComponent images1={brandImages1} direction="left" />
+              </div>
+              <div className="second-marquee">
+                <MarqueeComponent images1={brandImages2} direction="right" />
+              </div>
+            </div>
+          </div>
+          <div className="blog-section">
+            <div className="blog-title">
+              From our <span className="blog-gradiant">Blog</span>
+            </div>
+            <div className="blog-content">
+              <div>Level Up Your Web3 Gaming Experience: Explore Our</div>
+              <div>
+                Blog for Insights, Tips, and Innovations in Gaming SDKs!
+              </div>
+            </div>
+            <div className="bg-blog">
+              <img src={bgImageGaming} alt="bgConsole" />
+            </div>
+            <CustomCarousel />
+          </div>
+          <div className="review-section">
+            <div className="review-title">
+              Valuable <span className="review-gradiant">Reviews</span>
+            </div>
+            <div className="bg-review">
+              <img src={bgImageGaming} alt="bgConsole" />
+            </div>
+            <ReviewCarousal />
+          </div>
+          <div className="community-section">
+            <div className="community-image">
+              <img src={community} alt="community" />
+            </div>
+            <div className="community-title">
+              <div className="line-one-community">Strongest Web3</div>
+              <div className="community-gradiant">Community</div>
+            </div>
+            <div className="telegram-button">
+              <svg
+                width="24"
+                height="23"
+                viewBox="0 0 24 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.5915 7.15676C16.596 7.15676 16.602 7.15676 16.608 7.15676C16.7648 7.15676 16.9103 7.20551 17.0295 7.28951L17.0273 7.28801C17.1143 7.36376 17.1728 7.47026 17.187 7.59026V7.59251C17.202 7.68401 17.2103 7.78901 17.2103 7.89626C17.2103 7.94501 17.2088 7.99301 17.205 8.04101V8.03426C17.0363 9.81101 16.3043 14.1198 15.9323 16.1088C15.7748 16.951 15.465 17.233 15.165 17.26C14.5133 17.3208 14.0183 16.8295 13.3868 16.4155C12.3983 15.7668 11.8395 15.3633 10.8803 14.731C9.77101 14.0013 10.4903 13.5985 11.1218 12.943C11.2875 12.7705 14.1608 10.1568 14.217 9.91976C14.22 9.90551 14.2215 9.88976 14.2215 9.87326C14.2215 9.81476 14.1998 9.76151 14.1645 9.72101C14.1255 9.69551 14.0768 9.68126 14.0258 9.68126C13.992 9.68126 13.9598 9.68801 13.9298 9.69926L13.9313 9.69851C13.8323 9.72101 12.2533 10.7645 9.19426 12.829C8.86051 13.0923 8.43901 13.2588 7.98001 13.2783H7.97551C7.32526 13.1995 6.73501 13.0548 6.17476 12.8485L6.23026 12.8665C5.52676 12.637 4.96801 12.5163 5.01601 12.1278C5.04151 11.9258 5.32001 11.719 5.85151 11.5075C9.12551 10.081 11.3088 9.14076 12.4013 8.68676C13.6065 8.04701 15.0038 7.52051 16.473 7.17926L16.5908 7.15601L16.5915 7.15676ZM11.9475 0.395508C5.72101 0.410508 0.678757 5.46176 0.678757 11.6905C0.678757 17.9283 5.73526 22.9855 11.9738 22.9855C18.2123 22.9855 23.2688 17.929 23.2688 11.6905C23.2688 5.46176 18.2265 0.410508 12.0015 0.395508H12C11.9825 0.395508 11.965 0.395508 11.9475 0.395508Z"
+                  fill="white"
+                />
+              </svg>
+              <div> Join Telegram</div>
+            </div>
+          </div>
+          <div className="partners-section">
+            <div className="partners-title">
+              Our{" "}
+              <span className="partners-gradiant">Believers and Partners</span>
+            </div>
+            <div className="bg-partners">
+              <img src={bgImageGaming} alt="bgConsole" />
+            </div>
+            <div className="grid">
+              {partnersData.map((partner, index) => (
+                <div key={index} className="grid-item">
+                  <img src={partner.logo} alt={partner.name} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="connect-section">
+            <div className="lync-logo">
+              <img src={lyncLogo} alt="lyncLogo" />
+            </div>
+            <div className="connect-main">
+              <div className="connect-content">
+                <div className="Idea">Got a game Idea ?</div>
+                <div className="Together">Let's make it big together !!</div>
+              </div>
+              <div className="get-started-connect">
+                Get Started
+                <svg
+                  width="14"
+                  height="10"
+                  viewBox="0 0 14 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 5L13.3536 4.64645L13.7071 5L13.3536 5.35355L13 5ZM1 5.5C0.723858 5.5 0.5 5.27614 0.5 5C0.5 4.72386 0.723858 4.5 1 4.5V5.5ZM9.35355 0.646447L13.3536 4.64645L12.6464 5.35355L8.64645 1.35355L9.35355 0.646447ZM13.3536 5.35355L9.35355 9.35355L8.64645 8.64645L12.6464 4.64645L13.3536 5.35355ZM13 5.5H1V4.5H13V5.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="footer-container-home">
+            <div className="footer-pattern">
+              <img src={floorPattern} alt="floor-pattern" />
+            </div>
+            <Footer />
           </div>
         </div>
       </div>

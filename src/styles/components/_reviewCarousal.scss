@@ -1,0 +1,132 @@
+// Custom Carousel SCSS
+
+// Custom Carousel SCSS
+
+.custom-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #ffffff;
+  
+    .carousel-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; // Space between arrows and content
+    }
+  
+    .carousel-content-wrapper {
+      overflow: hidden;
+      width: calc(100% - 100px); // Adjust based on arrow width
+      max-width: 1000px; // Adjust as needed
+    }
+  
+    .carousel-content {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+  
+    .carousel-slide {
+      flex: 0 0 calc(33.333% - 20px);
+      margin: 0 10px;
+      opacity: 1;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+  
+      &.next {
+        animation: slideInRight 0.5s forwards;
+      }
+  
+      &.prev {
+        animation: slideInLeft 0.5s forwards;
+      }
+    }
+  
+    .border-wrapper {
+      padding: 2px;
+      border-radius: 12px;
+    }
+  
+    .content {
+      padding: 24px;
+      background: rgba(2, 6, 23, 1);
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .designation {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
+    }
+  
+    .logo {
+      margin-right: 12px;
+    }
+  
+    .content-review {
+      font-size: 14px;
+      
+      div:first-child {
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      
+      div:last-child {
+        opacity: 0.7;
+      }
+    }
+  
+    .control-arrow {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1;
+      flex-shrink: 0;
+  
+      &:hover {
+        color: #8a2be2;
+      }
+  
+      &.control-prev {
+        order: -1; // Place before content
+      }
+  
+      &.control-next {
+        order: 1; // Place after content
+      }
+    }
+  }
+
+
+  
+  // Keyframe animations for sliding effect
+  
+  // Add responsive style
+  
+  // Keyframe animations for sliding effect
+  
+  
+  // Add responsive styles
+  @media (max-width: 1024px) {
+    .custom-carousel {
+      .carousel-slide {
+        flex: 0 0 calc(50% - 20px);
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .custom-carousel {
+      .carousel-slide {
+        flex: 0 0 calc(100% - 20px);
+      }
+    }
+  }

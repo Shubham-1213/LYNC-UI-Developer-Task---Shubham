@@ -2,12 +2,13 @@
 @import '../base/variables';
 
 .outer-container-product{
-    background-color: red;
     border-radius: 20px;
     @include flexCol;
     height: 400px;
     width: 25%;
     gap: 25px;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0) 16.98%, rgba(2, 6, 23, 0.8) 66.5%);
+
 
     .image-container{
         width: 90%;
@@ -15,20 +16,32 @@
         justify-content: center;
         align-items: center;
         height: 200px;
-        background-color: blue;
         border-radius: 20px;
 
         img{
             width: 100%;
             height: 100%;
             border-radius: 20px;
+            object-fit: cover;
         }
+    }
+
+    .content-container-product{
+        width: 90%;
+        @include flexCol;
+        align-items: flex-start;
+        gap: 5px;
     }
 
     .title-product{
         font-weight: 900;
         font-size: 24px;
         
+    }
+    .description-product{
+        color: rgba(141, 150, 178, 1);
+        font-size: 14px;
+
     }
 }
 
