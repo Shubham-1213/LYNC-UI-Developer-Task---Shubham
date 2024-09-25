@@ -1,5 +1,6 @@
 import '../src/styles/main.scss'
 import Home from './pages/Home'
+
 function App() {
 
   return (

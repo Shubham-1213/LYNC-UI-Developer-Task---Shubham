@@ -1,8 +1,17 @@
 import "../styles/components/_navbar.scss";
+import navbarEffect from "../assets/navbar-effect.png";
+import navbarEffect2 from "../assets/navbar-effect-2.png";
 
 export default function Navbar() {
   return (
+  
     <div className="outer-container">
+      <div className="navbar-container">
+        <img src={navbarEffect} alt="navbar-effect" />
+      </div>
+      <div className="navbar-effect-2">
+        <img src={navbarEffect2} alt="navbar-effect-2" />
+      </div>
       <div className="main-container">
         <svg
           width="39"
