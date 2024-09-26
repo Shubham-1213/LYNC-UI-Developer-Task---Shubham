@@ -1,132 +1,166 @@
-// Custom Carousel SCSS
-
-// Custom Carousel SCSS
-
 .custom-carousel {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #ffffff;
+
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .carousel-content-wrapper {
+    overflow: hidden;
+    width: calc(100% - 100px);
+    max-width: 1000px;
+  }
+
+  .carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    &.next {
+      animation: slideInRight 0.5s forwards;
+    }
+
+    &.prev {
+      animation: slideInLeft 0.5s forwards;
+    }
+  }
+
+  .border-wrapper {
+    padding: 2px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #8a2be2, #4169e1);
+  }
+
+  .content {
+    padding: 24px;
+    background: rgba(2, 6, 23, 1);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .designation {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
+    border-radius: 8px;
+  }
+
+  .logo {
+    margin-right: 12px;
+  }
+
+  .content-review {
+    font-size: 14px;
+    
+    div:first-child {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    
+    div:last-child {
+      opacity: 0.7;
+    }
+  }
+
+  .control-arrow {
+    background: none;
+    border: none;
     color: #ffffff;
-  
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    flex-shrink: 0;
+
+    &:hover {
+      color: #8a2be2;
+    }
+
+    &.control-prev {
+      order: -1;
+    }
+
+    &.control-next {
+      order: 1;
+    }
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-carousel {
+    padding: 20px 10px;
+
     .carousel-wrapper {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px; // Space between arrows and content
+      gap: 10px;
     }
-  
+
     .carousel-content-wrapper {
-      overflow: hidden;
-      width: calc(100% - 100px); // Adjust based on arrow width
-      max-width: 1000px; // Adjust as needed
+      width: calc(100% - 60px);
     }
-  
-    .carousel-content {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-  
+
     .carousel-slide {
-      flex: 0 0 calc(33.333% - 20px);
-      margin: 0 10px;
-      opacity: 1;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-  
-      &.next {
-        animation: slideInRight 0.5s forwards;
-      }
-  
-      &.prev {
-        animation: slideInLeft 0.5s forwards;
-      }
+      padding: 0;
     }
-  
-    .border-wrapper {
-      padding: 2px;
-      border-radius: 12px;
-    }
-  
-    .content {
-      padding: 24px;
-      background: rgba(2, 6, 23, 1);
-      border-radius: 10px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  
-    .designation {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-      background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
-    }
-  
-    .logo {
-      margin-right: 12px;
-    }
-  
-    .content-review {
-      font-size: 14px;
-      
-      div:first-child {
-        font-weight: bold;
-        margin-bottom: 4px;
-      }
-      
-      div:last-child {
-        opacity: 0.7;
-      }
-    }
-  
+
     .control-arrow {
-      background: none;
-      border: none;
-      color: #ffffff;
-      font-size: 24px;
-      cursor: pointer;
-      padding: 10px;
-      z-index: 1;
-      flex-shrink: 0;
-  
-      &:hover {
-        color: #8a2be2;
-      }
-  
-      &.control-prev {
-        order: -1; // Place before content
-      }
-  
-      &.control-next {
-        order: 1; // Place after content
-      }
+      font-size: 20px;
     }
-  }
 
+    .content {
+      padding: 16px;
+    }
 
-  
-  // Keyframe animations for sliding effect
-  
-  // Add responsive style
-  
-  // Keyframe animations for sliding effect
-  
-  
-  // Add responsive styles
-  @media (max-width: 1024px) {
-    .custom-carousel {
-      .carousel-slide {
-        flex: 0 0 calc(50% - 20px);
-      }
+    .designation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      margin-bottom: 8px;
+    }
+
+    .content-review {
+      font-size: 12px;
     }
   }
-  
-  @media (max-width: 768px) {
-    .custom-carousel {
-      .carousel-slide {
-        flex: 0 0 calc(100% - 20px);
-      }
-    }
-  }
+}

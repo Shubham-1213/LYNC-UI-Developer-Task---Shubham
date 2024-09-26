@@ -1,0 +1,48 @@
+@import '../utils/mixins';
+
+.community-section {
+    @include flexCol;
+    margin-top: 350px;
+    width: 80%;
+    gap: 20px;
+  
+    .community-title {
+      font-size: 48px;
+      font-weight: 900;
+      @include flexCol;
+  
+      .community-gradiant {
+        @include gradiantText(
+          $gradiant: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%)
+        );
+      }
+    }
+    .telegram-button {
+      @include flexRow;
+      gap: 10px;
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      border-radius: 20px;
+      width: 160px;
+      height: 40px;
+    }
+  
+    .community-image {
+      position: absolute;
+    }
+
+    @media screen and (max-width: 768px) {
+        .community-title{
+            font-size: 24px;
+        }
+        .community-image{
+            img{
+                max-width: 400px;
+                max-height: 400px;
+            }
+        }
+        .telegram-button{
+
+        }
+        
+    }
+  }

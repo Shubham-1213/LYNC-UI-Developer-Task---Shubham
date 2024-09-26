@@ -35,11 +35,21 @@ const carouselDataReview = [
   },
 ];
 
-const CustomCarousel = () => {
+const ReviewCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [slideDirection, setSlideDirection] = useState(""); // Keep track of direction
-  const visibleSlides = 3;
+  const [slideDirection, setSlideDirection] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
   const totalSlides = carouselDataReview.length;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Call once on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleNext = () => {
     setSlideDirection("next");
@@ -51,15 +61,7 @@ const CustomCarousel = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
-  const getVisibleData = () => {
-    const visibleData = [];
-    for (let i = 0; i < visibleSlides; i++) {
-      visibleData.push(carouselDataReview[(currentSlide + i) % totalSlides]);
-    }
-    return visibleData;
-  };
-
-  const visibleData = getVisibleData();
+  const visibleSlides = isMobile ? 1 : 3;
 
   return (
     <div className="custom-carousel">
@@ -72,18 +74,18 @@ const CustomCarousel = () => {
           <ChevronLeft size={24} />
         </button>
         <div className="carousel-content-wrapper">
-          <div className="carousel-content">
-            {visibleData.map((slide, index) => (
+          <div 
+            className="carousel-content" 
+            style={{ transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)` }}
+          >
+            {carouselDataReview.map((slide, index) => (
               <div
                 key={index}
-                className={`carousel-slide ${slideDirection}`} // Apply animation class here
+                className={`carousel-slide ${slideDirection}`}
+                style={{ flex: `0 0 ${100 / visibleSlides}%` }}
               >
                 <div className="border-wrapper">
-                  {" "}
-                  {/* Wrapper for the gradient border */}
                   <div className="content">
-                    {" "}
-                    {/* Inner content */}
                     <div className="description-carousal">{slide.description}</div>
                     <div className="designation">
                       <div className="logo">
@@ -120,4 +122,4 @@ const CustomCarousel = () => {
   );
 };
 
-export default CustomCarousel;
+export default ReviewCarousel;

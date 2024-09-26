@@ -1,0 +1,66 @@
+@import '../utils/mixins';
+
+.product-section {
+    width: 100%;
+    @include flexCol;
+    margin-top: 150px;
+  
+    .product-title {
+      font-size: 48px;
+      font-weight: 900;
+    }
+  
+    .product-gradiant {
+      @include gradiantText(
+        $gradiant: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%)
+      );
+    }
+  
+    .product-card-container {
+      @include flexCol;
+      justify-content: space-around;
+      width: 80%;
+      position: relative;
+  
+      .line-one-product {
+        @include flexRow;
+        gap: 20px;
+        width: 100%;
+      }
+  
+      .line-two-product {
+        @include flexRow;
+        gap: 20px;
+        width: 100%;
+      }
+  
+      .bg-product {
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+        &{
+            gap: 40px;
+        }
+        .product-title {
+            font-size: 32px;
+        }
+      .product-card-container {
+        @include flexCol;
+        width: 100%;
+        gap: 20px   ;
+
+        .line-one-product{
+            @include flexCol;
+            width: 100%;
+        }
+
+        .line-two-product{
+            @include flexCol;
+            width: 100%;
+        }
+      }
+    }
+  }

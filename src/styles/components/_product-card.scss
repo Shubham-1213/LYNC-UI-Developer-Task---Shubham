@@ -43,5 +43,24 @@
         font-size: 14px;
 
     }
+
+    @media(max-width: 768px){
+        &{
+            width: 100%;
+            height: 90px;
+            background: none;
+            font-size: 14px;
+        }
+        .title-product{
+            font-size: 18px;
+        }
+        .description-product{
+            font-size: 14px;
+        }
+        
+        .image-container{
+            display: none;
+        }
+    }
 }
 

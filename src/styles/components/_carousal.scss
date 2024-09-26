@@ -1,133 +1,146 @@
 .custom-carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-content-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-content {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  position: relative;
+  flex: 1;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .border-wrapper {
     border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    max-width: 100%;
-    margin: auto;
+    padding: 1px;
+    background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
   }
-  
-  .carousel-wrapper {
-    display: flex;
-    align-items: center;
+
+  .content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
   }
-  
-  .carousel-content-wrapper {
-    overflow: hidden;
+
+  /* Transition animations */
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+  &.next,
+  &.prev {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.exit-next {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  &.exit-prev {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .carousel-image {
     width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
   }
-  
+
+  .read-more {
+    background-color: #0f3460;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #16213e;
+    }
+  }
+}
+
+.control-arrow {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: background 0.3s !important;
+  opacity: 1 !important;
+}
+
+.control-arrow:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.control-prev {
+  left: 10px !important;
+  position: absolute;
+  z-index: 1;
+}
+
+.control-next {
+  right: 10px !important;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .carousel-content {
-    display: flex;
+    gap: 5px;
+  }
+
+  .carousel-slide {
+    flex: 1 1 100%; /* Take full width on mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel-content {
     gap: 10px;
   }
-  
-  .carousel-slide {
-    position: relative; /* Required for absolute positioning of inner content */
-    flex: 1;
-    padding: 0; /* No padding on the slide itself */
-    border-radius: 10px; /* Actual border-radius on the card */
-    overflow: hidden; /* Ensure content doesn't overflow */
-  
-    /* Wrapper for the gradient border */
-    .border-wrapper {
-      border-radius: 10px; /* Same border-radius */
-      padding: 1px; /* Padding to create the effect of a border */
-      background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
 
-    }
-  
-    /* Inner content */
-    .content {
-     /* White background for the content */
-      border-radius: 10px; /* Same border-radius */
-      padding: 20px; /* Inner padding */
-      box-sizing: border-box; /* Include padding in width and height */
-      text-align: left;
-    }
-  
- /* Initially hidden */
-    transform: translateX(100%); /* Slide in from right for 'next' */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  
-    &.next {
-      opacity: 1;
-      transform: translateX(0); /* Slide into view */
-    }
-  
-    &.prev {
-      opacity: 1;
-      transform: translateX(0); /* Slide into view from left */
-    }
-  
-    &.exit-next {
-      opacity: 0;
-      transform: translateX(-100%); /* Slide out to the left */
-    }
-  
-    &.exit-prev {
-      opacity: 0;
-      transform: translateX(100%); /* Slide out to the right */
-    }
-  
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-  
-    .carousel-image {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-  
-    .read-more {
-      background-color: #0f3460;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: #16213e;
-      }
-    }
+  .carousel-slide {
+    flex: 1 1 calc(33.33% - 10px); /* 3 cards with gap between them */
   }
-  
-  .control-arrow {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: none !important;
-    border-radius: 50% !important;
-    width: 40px !important;
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-    transition: background 0.3s !important;
-    opacity: 1 !important;
-  }
-  
-  .control-arrow:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-  }
-  
-  .control-prev {
-    left: 10px !important;
-    position: absolute;
-    z-index: 1;
-  }
-  
-  .control-next {
-    right: 10px !important;
-    position: absolute;
-    z-index: 1;
-  }
-  
+}

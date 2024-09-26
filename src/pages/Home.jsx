@@ -257,82 +257,81 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-              
             </div>
             <div className="bg-image-mobile">
-                <svg
-                  width="372"
-                  height="197"
-                  viewBox="0 0 372 197"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g filter="url(#filter0_b_158_1920)">
-                    <path
-                      d="M372 20L372 189.574C372 193.675 368.675 197 364.574 197C362.028 197 359.66 195.696 358.299 193.544L351.471 182.749C347.805 176.954 341.426 173.44 334.568 173.44L330.805 173.44C323.664 173.44 317.437 178.295 315.695 185.22C313.953 192.145 307.726 197 300.585 197L20.979 197C9.93329 197 0.978974 188.046 0.978975 177L0.978989 20C0.97899 8.9543 9.93328 -9.67326e-08 20.979 8.37228e-07L352 2.88265e-05C363.046 2.97605e-05 372 8.95433 372 20Z"
-                      fill="url(#paint0_linear_158_1920)"
+              <svg
+                width="372"
+                height="197"
+                viewBox="0 0 372 197"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_b_158_1920)">
+                  <path
+                    d="M372 20L372 189.574C372 193.675 368.675 197 364.574 197C362.028 197 359.66 195.696 358.299 193.544L351.471 182.749C347.805 176.954 341.426 173.44 334.568 173.44L330.805 173.44C323.664 173.44 317.437 178.295 315.695 185.22C313.953 192.145 307.726 197 300.585 197L20.979 197C9.93329 197 0.978974 188.046 0.978975 177L0.978989 20C0.97899 8.9543 9.93328 -9.67326e-08 20.979 8.37228e-07L352 2.88265e-05C363.046 2.97605e-05 372 8.95433 372 20Z"
+                    fill="url(#paint0_linear_158_1920)"
+                  />
+                  <path
+                    d="M371.5 20L371.5 189.574C371.5 193.399 368.399 196.5 364.574 196.5C362.2 196.5 359.991 195.283 358.721 193.277L351.894 182.482C348.136 176.541 341.597 172.94 334.568 172.94L330.805 172.94C323.435 172.94 317.008 177.951 315.21 185.098C313.524 191.801 307.497 196.5 300.585 196.5L20.979 196.5C10.2094 196.5 1.47897 187.77 1.47898 177L1.47899 20C1.47899 9.23044 10.2094 0.5 20.979 0.500001L352 0.500029C362.77 0.50003 371.5 9.23047 371.5 20Z"
+                    stroke="url(#paint1_linear_158_1920)"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_b_158_1920"
+                    x="-299.021"
+                    y="-300"
+                    width="971.021"
+                    height="797"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feGaussianBlur
+                      in="BackgroundImageFix"
+                      stdDeviation="150"
                     />
-                    <path
-                      d="M371.5 20L371.5 189.574C371.5 193.399 368.399 196.5 364.574 196.5C362.2 196.5 359.991 195.283 358.721 193.277L351.894 182.482C348.136 176.541 341.597 172.94 334.568 172.94L330.805 172.94C323.435 172.94 317.008 177.951 315.21 185.098C313.524 191.801 307.497 196.5 300.585 196.5L20.979 196.5C10.2094 196.5 1.47897 187.77 1.47898 177L1.47899 20C1.47899 9.23044 10.2094 0.5 20.979 0.500001L352 0.500029C362.77 0.50003 371.5 9.23047 371.5 20Z"
-                      stroke="url(#paint1_linear_158_1920)"
+                    <feComposite
+                      in2="SourceAlpha"
+                      operator="in"
+                      result="effect1_backgroundBlur_158_1920"
                     />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_b_158_1920"
-                      x="-299.021"
-                      y="-300"
-                      width="971.021"
-                      height="797"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feGaussianBlur
-                        in="BackgroundImageFix"
-                        stdDeviation="150"
-                      />
-                      <feComposite
-                        in2="SourceAlpha"
-                        operator="in"
-                        result="effect1_backgroundBlur_158_1920"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_backgroundBlur_158_1920"
-                        result="shape"
-                      />
-                    </filter>
-                    <linearGradient
-                      id="paint0_linear_158_1920"
-                      x1="200.923"
-                      y1="664.484"
-                      x2="-130.404"
-                      y2="632.012"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#D9D9D9" stop-opacity="0.07" />
-                      <stop
-                        offset="0.990529"
-                        stop-color="#D9D9D9"
-                        stop-opacity="0.05"
-                      />
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear_158_1920"
-                      x1="101.069"
-                      y1="323.643"
-                      x2="-318.15"
-                      y2="-176.457"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="white" stop-opacity="0.21" />
-                      <stop offset="1" stop-color="white" stop-opacity="0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_backgroundBlur_158_1920"
+                      result="shape"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_158_1920"
+                    x1="200.923"
+                    y1="664.484"
+                    x2="-130.404"
+                    y2="632.012"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#D9D9D9" stop-opacity="0.07" />
+                    <stop
+                      offset="0.990529"
+                      stop-color="#D9D9D9"
+                      stop-opacity="0.05"
+                    />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_158_1920"
+                    x1="101.069"
+                    y1="323.643"
+                    x2="-318.15"
+                    y2="-176.457"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="white" stop-opacity="0.21" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
             <div className="header-complexity">
               <div className="title-complexities">
                 Don't worry about the{" "}
@@ -487,9 +486,8 @@ export default function Home() {
             <div className="small-stat-container">
               <div className="project-stats">
                 <span className="gradiant-two">200+</span>
-                <span>Projects have</span>
-                <span>downloaded and </span>
-                <span>integrated LYNC SDKs</span>
+                Projects have downloaded and <br className="br-small-stat-m " />
+                integrated LYNC SDKs
               </div>
               <div className="contract-stats">
                 <span className="gradiant-three">8000+</span>
@@ -498,9 +496,14 @@ export default function Home() {
               </div>
             </div>
             <div className="big-stat-container">
+              <div className="big-stat-content">
               <span className="gradiant-two">500000+</span>
-              <div>Users ops created in 10</div>
-              <div>hours</div>
+                <div>
+                     Users ops created in 10{" "}
+                    <br className="br-big-stat" />
+                    hours
+                </div>
+              </div>
               <div className="big-stat-gif">
                 <img src={secondGif} alt="card" />
               </div>
@@ -585,9 +588,9 @@ export default function Home() {
               From our <span className="blog-gradiant">Blog</span>
             </div>
             <div className="blog-content">
-              <div>Level Up Your Web3 Gaming Experience: Explore Our</div>
-              <div>
-                Blog for Insights, Tips, and Innovations in Gaming SDKs!
+              <div>Level Up Your Web3 Gaming Experience: <br className="br-blog-m" /> Explore Our<br className="br-blog-d" />
+              
+                Blog for Insights, Tips, and <br className="br-blog-m" /> Innovations in Gaming SDKs!
               </div>
             </div>
             <div className="bg-blog">
@@ -630,8 +633,7 @@ export default function Home() {
           </div>
           <div className="partners-section">
             <div className="partners-title">
-              Our{" "}
-              <span className="partners-gradiant">Believers and Partners</span>
+              Our <br className="br-partner-m" /><span className="partners-gradiant">Believers and Partners</span>
             </div>
             <div className="bg-partners">
               <img src={bgImageGaming} alt="bgConsole" />

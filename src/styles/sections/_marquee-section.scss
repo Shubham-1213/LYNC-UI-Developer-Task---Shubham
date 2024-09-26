@@ -1,0 +1,51 @@
+@import '../utils/mixins';
+
+.marquee-section {
+    margin-top: 150px;
+    width: 70%;
+    @include flexCol;
+    gap: 50px;
+    position: relative;
+  
+    .marquee-title {
+      font-size: 48px;
+      font-weight: 900;
+      @include flexCol;
+  
+      .marquee-gradiant {
+        @include gradiantText(
+          $gradiant: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%)
+        );
+      }
+    }
+  
+    .bg-marquee {
+      position: absolute;
+      z-index: -1;
+      object-fit: contain;
+      // filter: blur(500px);
+      // transform: rotate(-99.25deg);
+    }
+    .actual-marquee {
+      width: 90%;
+      @include flexCol;
+      gap: 30px;
+    }
+  
+    .first-marquee {
+      width: 90%;
+    }
+  
+    .second-marquee {
+      width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        .marquee-title{
+            font-size: 24px;
+        }
+        .bg-marquee{
+            display: none;
+        }
+    }
+  }
