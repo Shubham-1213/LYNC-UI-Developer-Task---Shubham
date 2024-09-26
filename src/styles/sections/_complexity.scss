@@ -1,0 +1,118 @@
+@import "../utils/mixins" ;
+
+.complexities-section {
+  margin-top: 150px;
+  @include flexCol;
+  width: 70%;
+  gap: 30px;
+  border-radius: 48px;
+  padding: 10px;
+  position: relative;
+  // background-image: url(/src/assets/Card.png);
+
+  .bg-image-complexity {
+    position: absolute;
+  }
+   .bg-image-mobile{
+    display: none;
+   }
+  .complexities-gradient{
+    @include gradiantText($gradiant : linear-gradient(94.68deg, #FF0276 2.51%, #7209B7 56.42%));
+
+  }
+
+  .header-complexity {
+    @include flexRow;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    
+  }
+
+  .dummy {
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    right: 280px;
+    top: -165px;
+  }
+
+  .title-complexities {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .list-diamond-container {
+    @include generalFlex(row, center, space-between);
+    gap: 20px;
+    width: 90%;
+  }
+
+  .list-complexities {
+    @include generalFlex(column, flex-start, center);
+    gap: 20px;
+
+    .list-item {
+      @include flexRow;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &{
+        margin-top: 75px;
+        gap: 20px;
+        font-size: 16px;
+    }
+    .complexities-section{
+        @include flexCol;
+        width: 90%;
+    }
+    .bg-image-complexity{
+        display: none;
+    }
+    .bg-image-mobile{
+        display: block;
+        position: absolute;
+        object-position: center;
+    }
+    .header-complexity {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .title-complexities {
+      font-size: 14px;
+      max-width: 100%;
+    }
+  
+    .dummy {
+      display: none;
+    }
+    .list-diamond-container{
+        width: 100%;
+    }
+
+    .list-complexities{
+        width: 100%;
+        gap: 10px;
+    }
+  
+    .list-item {
+      font-size: 10px;
+      display: flex;
+      flex-direction: row;
+      font-weight: 700;
+      
+      align-items: flex-start;
+      justify-content: center;
+  
+      svg{
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+

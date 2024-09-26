@@ -1,64 +1,150 @@
-@import '../base/variables.scss';
-@import '../utils/mixins.scss';
-
-.outer-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    width: 100%;
-    justify-content: center;
-
-    .navbar-container{
-       position: absolute;
-       filter: blur(100px);
-       width: 823.86px;
-       transform: rotate(-146.39deg);
-       left: 10px;
+.outer-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   justify-content: center;
+   height: auto; 
+ 
+   .navbar-container {
+     position: absolute;
+     filter: blur(100px);
+     width: 823.86px;
+     transform: rotate(-146.39deg);
+     left: 10px;
+     z-index: -1;
+   }
+   .navbar-effect-2 {
+     position: absolute;
+     filter: blur(100px);
+     width: 823.86px;
+     left: 700px;
+     transform: rotate(99.25deg);
+   }
+ 
+   padding: 40px 20px 10px 20px;
+ 
+   .main-container {
+     padding: 10px 14px;
+     width: 70%;
+     display: flex;
+     flex-direction: row;
+     background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
+     border: 1px solid;
+     border-image-source: linear-gradient(122.35deg, rgba(255, 255, 255, 0.21) 19.78%, rgba(255, 255, 255, 0) 187.39%);
+     height: 50px;
+     align-items: center;
+     justify-content: space-between;
+     font-weight: 700;
+     color: white;
+     font-size: 16px;
+     border-radius: 48px;
+     position: relative;
+ 
+     .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      .line {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+      }
     }
-    .navbar-effect-2{
-      position: absolute;
-      filter: blur(100px); 
-       width: 823.86px;
-       left: 700px;
-       transform: rotate(99.25deg);
-    }
+ 
+     .link-container {
+       display: flex;
+       gap: 22px;
+     }
+ 
+     .button-container {
+       display: flex;
+       background-color: white;
+       gap: 5px;
+       justify-content: center;
+       align-items: center;
+       color: black;
+       width: 131px;
+       height: 40px;
+       font-size: 14px;
+       border-radius: 20px;
+     }
+ 
+     .logo {
+       order: -1;
+     }
+   }
+ 
+   @media (max-width: 768px) {
+     .outer-container{
+      position: relative;
+     }
 
-    padding: 40px 20px 10px 20px;
-    .main-container{
-        padding: 10px 14px 10px 14px;
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-        background: linear-gradient(92.98deg, rgba(217, 217, 217, 0.07) 32.09%, rgba(217, 217, 217, 0.05) 116.98%);
-        border: 1px solid;
-        border-image-source: linear-gradient(122.35deg, rgba(255, 255, 255, 0.21) 19.78%, rgba(255, 255, 255, 0) 187.39%);  
-        height: 50px;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: 700;
-        color: white;
-        font-size: 16px;
-        border-radius: 48px;
-        
-        
-         .link-container{
-            @include flexDirection('row');
-            gap: 22px;
+     .navbar-container {
+      top: -10px; // Adjust based on the mobile design
+      left: 0;
+      width: 100%;
+      height: 60px; // Adjust based on the mobile design
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .navbar-effect-2 {
+      top: -5px; // Adjust based on the mobile design
+      left: 0;
+      width: 100%;
+      height: 60px; // Adjust based on the mobile design
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+      .main-container {
+       flex-direction: row;
+       justify-content: space-between;
+       height: auto;
+       position: relative;
+ 
+       .hamburger {
+         display: flex;
+       }
+ 
+       .link-container {
+         display: none;
+         flex-direction: column;
+         gap: 10px;
+         background-color: rgba(0, 0, 0, 0.9);
+         position: absolute;
+         top: 60px;
+         left: 0;
+         right: 0;
+         padding: 20px;
+         border-radius: 12px;
+         z-index: 1;
+       }
+ 
+       .link-container.open {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+       }
+ 
+       .logo {
+         margin: 0 auto;
+       }
+ 
+       .button-container {
+         order: 1;
+         width: 20% ;
+
+         .button{
+            display: none;
          }
-         .button-container{
-            display: flex;
-            background-color: white;
-            gap: 5px;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            width: 131px;
-            height: 40px;
-            font-size: 14px;
-            border-radius: 20px;
-         }
-
-    }
-    
-
-}
+       }
+     }
+   }
+ }
+ 

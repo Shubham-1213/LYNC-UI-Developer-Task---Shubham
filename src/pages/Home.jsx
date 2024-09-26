@@ -33,7 +33,7 @@ import community from "../assets/community.png";
 import lyncLogo from "../assets/LYNCLogo.png";
 import Footer from "../components/Footer";
 import floorPattern from "../assets/floor-pattern.png";
-
+import bgHero from "../assets/bg-image.png";
 const brandImages1 = [
   { src: "/src/assets/APTOS.png", alt: "Brand 1" },
   { src: "/src/assets/astar.png", alt: "Brand 2" },
@@ -65,6 +65,7 @@ export default function Home() {
         <Navbar />
         <div className="content-home-container">
           <div className="bg-image-container">
+            <img src={bgHero} alt="bgImage" />
             <div className="heading-hero">Launch Your Game</div>
             <div>
               on <span className="gradient-text">Web 3.0</span> in Minutes
@@ -112,7 +113,7 @@ export default function Home() {
             </div>
           </div>
           <div className="backed-by-section">
-            <div style={{ fontSize: "24px", fontWeight: 700 }}>Backed by</div>
+            <div>Backed by</div>
             <div className="sponsers-container">
               <div className="sponser">
                 <img src={sponser1} alt="sponser1" />
@@ -126,16 +127,15 @@ export default function Home() {
             </div>
           </div>
           <div className="info-section">
-            <div className="information-1">
+            <div className="information">
               LYNC provides a scalable infrastructure for launching web3
-            </div>
-            <div className="information-2">
-              games without hampering the{" "}
+              <br />
+              games, without hampering the{" "}
               <span className="info-gradient">gaming experience.</span>
-            </div>
-            <div className="infomation-3">
+              <br />
               So that you can deliver the next big hit!
             </div>
+            <div className="information-mobile"></div>
           </div>
           <div className="gaming-section">
             <div className="background-gaming">
@@ -152,39 +152,39 @@ export default function Home() {
                 <img src={gaming1} alt="gaming1" />
               </div>
               <div className="gaming1">
-                <img src={gaming2} alt="gaming1" />
+                <img src={gaming2} alt="gaming2" />
               </div>
               <div className="gaming1">
-                <img src={gaming3} alt="gaming1" />
+                <img src={gaming3} alt="gaming3" />
               </div>
               <div className="gaming1">
-                <img src={gaming4} alt="gaming1" />
+                <img src={gaming4} alt="gaming4" />
               </div>
               <div className="gaming1">
-                <img src={gaming5} alt="gaming1" />
+                <img src={gaming5} alt="gaming5" />
               </div>
             </div>
           </div>
           <div className="power-up">
             <div className="text-block-power">
-              <span className="line-1">Power up your Web3 game</span>
-              <span className="line-2">
-                development, with{" "}
-                <span className="power-up-gradiant">LYNC SDKs</span>
-              </span>
-              <span className="line-3"></span>
+              Power Up Your Web3 Game
+              <br />
+              Development, With <br className="mobile-br" />
+              <span className="power-up-gradiant">LYNC SDKs</span>
             </div>
             <div className="explain-power">
-              <div>
-                LYNC SDKs can be easily integrated into game engines like Unity
-                3D
-              </div>
-              <div>and Unreal Engine in a few clicks.</div>
-              <div></div>
+              LYNC SDKs can be easily integrated into{" "}
+              <br className="explain-power-m-br" /> game engines like Unity 3D{" "}
+              <br className="explain-power-d-br" />
+              and <br className="explain-power-m-br" />
+              Unreal Engine in a few clicks.
+            </div>
+            <div className="bg-power">
+              <img src={bgImageGaming} alt="bgPower" />
             </div>
           </div>
           <div className="complexities-section">
-            {/* <div className="bg-image-complexity">
+            <div className="bg-image-complexity">
               <svg
                 width="1104"
                 height="369"
@@ -257,14 +257,91 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-            </div> */}
+              
+            </div>
+            <div className="bg-image-mobile">
+                <svg
+                  width="372"
+                  height="197"
+                  viewBox="0 0 372 197"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_b_158_1920)">
+                    <path
+                      d="M372 20L372 189.574C372 193.675 368.675 197 364.574 197C362.028 197 359.66 195.696 358.299 193.544L351.471 182.749C347.805 176.954 341.426 173.44 334.568 173.44L330.805 173.44C323.664 173.44 317.437 178.295 315.695 185.22C313.953 192.145 307.726 197 300.585 197L20.979 197C9.93329 197 0.978974 188.046 0.978975 177L0.978989 20C0.97899 8.9543 9.93328 -9.67326e-08 20.979 8.37228e-07L352 2.88265e-05C363.046 2.97605e-05 372 8.95433 372 20Z"
+                      fill="url(#paint0_linear_158_1920)"
+                    />
+                    <path
+                      d="M371.5 20L371.5 189.574C371.5 193.399 368.399 196.5 364.574 196.5C362.2 196.5 359.991 195.283 358.721 193.277L351.894 182.482C348.136 176.541 341.597 172.94 334.568 172.94L330.805 172.94C323.435 172.94 317.008 177.951 315.21 185.098C313.524 191.801 307.497 196.5 300.585 196.5L20.979 196.5C10.2094 196.5 1.47897 187.77 1.47898 177L1.47899 20C1.47899 9.23044 10.2094 0.5 20.979 0.500001L352 0.500029C362.77 0.50003 371.5 9.23047 371.5 20Z"
+                      stroke="url(#paint1_linear_158_1920)"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_b_158_1920"
+                      x="-299.021"
+                      y="-300"
+                      width="971.021"
+                      height="797"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feGaussianBlur
+                        in="BackgroundImageFix"
+                        stdDeviation="150"
+                      />
+                      <feComposite
+                        in2="SourceAlpha"
+                        operator="in"
+                        result="effect1_backgroundBlur_158_1920"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_backgroundBlur_158_1920"
+                        result="shape"
+                      />
+                    </filter>
+                    <linearGradient
+                      id="paint0_linear_158_1920"
+                      x1="200.923"
+                      y1="664.484"
+                      x2="-130.404"
+                      y2="632.012"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#D9D9D9" stop-opacity="0.07" />
+                      <stop
+                        offset="0.990529"
+                        stop-color="#D9D9D9"
+                        stop-opacity="0.05"
+                      />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_158_1920"
+                      x1="101.069"
+                      y1="323.643"
+                      x2="-318.15"
+                      y2="-176.457"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="white" stop-opacity="0.21" />
+                      <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
             <div className="header-complexity">
               <div className="title-complexities">
-                Don't worry about the
-                <span className="complexities-gradient"> Web3</span>
+                Don't worry about the{" "}
+                <span className="complexities-gradient"> Web3</span>{" "}
                 complexities.
               </div>
-              <div className="dummy">this is my nmae</div>
+              <div className="dummy">
+                <img src={diamond} alt="diamond" />
+              </div>
             </div>
             <div className="list-diamond-container">
               <div className="list-complexities">

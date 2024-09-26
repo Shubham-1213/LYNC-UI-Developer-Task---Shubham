@@ -1,8 +1,20 @@
 import "../styles/components/_navbar.scss";
 import navbarEffect from "../assets/navbar-effect.png";
 import navbarEffect2 from "../assets/navbar-effect-2.png";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleClose = () => {
+    setMenuOpen(false);
+  }
+
+
   return (
   
     <div className="outer-container">
@@ -13,6 +25,11 @@ export default function Navbar() {
         <img src={navbarEffect2} alt="navbar-effect-2" />
       </div>
       <div className="main-container">
+      <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </div>
         <svg
           width="39"
           height="26"
@@ -41,12 +58,13 @@ export default function Navbar() {
             fill="white"
           />
         </svg>
-        <div className="link-container">
+        <div className={`link-container ${menuOpen ? "open" : ""}`}>
           <div className="page">Home</div>
           <div className="page">Documentation</div>
           <div className="page">Blogs</div>
           <div className="page">LYNC Portal</div>
           <div className="page">Request Demo</div>
+          <div className={`page ${menuOpen ? "open" : ""}`} onClick={handleClose}>Close</div>
         </div>
         <div className="button-container">
           <div className="button">Get Started</div>
