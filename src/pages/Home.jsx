@@ -11,7 +11,7 @@ import gaming3 from "../assets/gaming3.png";
 import gaming4 from "../assets/gaming4.png";
 import gaming5 from "../assets/gaming5.png";
 import bgImageGaming from "../assets/bgImageGaming.png";
-import card from "../assets/card.png";
+import card from "../assets/Card.png";
 import diamond from "../assets/diamond.png";
 import console from "../assets/console.gif";
 import bgConsole from "../assets/Docscard.png";
