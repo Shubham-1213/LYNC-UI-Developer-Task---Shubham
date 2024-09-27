@@ -149,7 +149,7 @@ export default function Home() {
               <img src={bgImageGaming} alt="bgImage" />
             </div>
             <div className="bgVectorBlur">
-                <img src={bgVectorBlur} alt="bgVectorBlur" />
+                <img src={bgVectorBlur} alt="bgVectorBlur"/>
             </div>
             <div className="gaming-tag-line">
               <div className="gaming-1">Making blockchain gaming</div>
@@ -191,6 +191,9 @@ export default function Home() {
             </div>
             <div className="bg-power">
               <img src={bgImageGaming} alt="bgPower" />
+            </div>
+            <div className="bgVectorBlurPower">
+                <img src={bgVectorBlur} alt="bgVectorBlur"/>
             </div>
           </div>
           <div className="complexities-section">
@@ -525,6 +528,9 @@ export default function Home() {
             <div className="product-title">
               Product <span className="product-gradiant">Suite</span>
             </div>
+            <div className="bgVectorBlurProduct">
+                <img src={bgVectorBlur} alt="bgVectorBlur"/>
+            </div>
             <div className="product-card-container">
               <ProductCard />
               <ProductCard />
@@ -533,7 +539,7 @@ export default function Home() {
               <ProductCard />
               <ProductCard />
               <div className="bg-product">
-                {/* <svg
+                <svg
                   width="1440"
                   height="1387"
                   viewBox="0 0 1440 1387"
@@ -570,7 +576,7 @@ export default function Home() {
                       />
                     </filter>
                   </defs>
-                </svg> */}
+                </svg>
               </div>
             </div>
           </div>
