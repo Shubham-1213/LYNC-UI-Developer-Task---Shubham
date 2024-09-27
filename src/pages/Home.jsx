@@ -39,6 +39,7 @@ import spheron from "../assets/spheron.png";
 import biconomy from "../assets/biconomy.png";
 import lighthouse from "../assets/lighthouse.png";
 import saus from "../assets/saus.png";
+import bgVectorBlur from '../assets/blurr-vector.png';
 
 const brandImages1 = [
   { src: aptos, alt: "Brand 1" },
@@ -146,6 +147,9 @@ export default function Home() {
           <div className="gaming-section">
             <div className="background-gaming">
               <img src={bgImageGaming} alt="bgImage" />
+            </div>
+            <div className="bgVectorBlur">
+                <img src={bgVectorBlur} alt="bgVectorBlur" />
             </div>
             <div className="gaming-tag-line">
               <div className="gaming-1">Making blockchain gaming</div>

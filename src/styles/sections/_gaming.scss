@@ -13,6 +13,10 @@
     position: absolute;
   }
 
+  .bgVectorBlur{
+    display: none;
+  }
+
   .gaming-tag-line {
     display: flex;
     flex-direction: column;
@@ -55,11 +59,24 @@
   .gaming-section {
     margin-top: 75px;
     font-size: 24px;
+    // overflow: hidden ;
+    position: relative;
+     .background-gaming{
+      display: none;
+     }
 
-     
+     .bgVectorBlur{
+      display: block;
+      position: absolute;
+      filter: blur(200px);
+      z-index: -1;
+      // width: 50%;
+    }
     .gaming-tag-line {
       font-weight: 900;
       position: relative;
+      
+
     }
 
 
@@ -76,6 +93,10 @@
   .gaming-section {
     margin-top: 75px; /* Adjust as needed */
     font-size: 32px;  /* Adjust as needed */
+
+    .bgVectorBlur{
+      display: none;
+    }
 
     .gaming-tag-line {
       font-weight: 900;
