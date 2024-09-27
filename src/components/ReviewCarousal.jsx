@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Slider from "react-slick";
+import "../styles/components/_reviewCarousal.scss"; // Keep the necessary styles
+import "slick-carousel/slick/slick.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import "../styles/components/_reviewCarousal.scss";
+import "slick-carousel/slick/slick-theme.css";
 
 const carouselDataReview = [
   {
@@ -35,89 +38,67 @@ const carouselDataReview = [
   },
 ];
 
+const NextArrow = ({ onClick }) => (
+  <button className="custom-arrow next-arrow" onClick={onClick}>
+    <ChevronRight size={24} color="white"/>
+  </button>
+);
+
+const PrevArrow = ({ onClick }) => (
+  <button className="custom-arrow prev-arrow" onClick={onClick}>
+    <ChevronLeft size={24} color="white"/>
+  </button>
+);
+
 const ReviewCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [slideDirection, setSlideDirection] = useState("");
-  const [isMobile, setIsMobile] = useState(false);
-  const totalSlides = carouselDataReview.length;
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize(); // Call once on mount
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const handleNext = () => {
-    setSlideDirection("next");
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
-
-  const handlePrev = () => {
-    setSlideDirection("prev");
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const visibleSlides = isMobile ? 1 : 3;
 
   return (
     <div className="custom-carousel">
-      <div className="carousel-wrapper">
-        <button
-          type="button"
-          onClick={handlePrev}
-          className="control-arrow control-prev"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <div className="carousel-content-wrapper">
-          <div 
-            className="carousel-content" 
-            style={{ transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)` }}
-          >
-            {carouselDataReview.map((slide, index) => (
-              <div
-                key={index}
-                className={`carousel-slide ${slideDirection}`}
-                style={{ flex: `0 0 ${100 / visibleSlides}%` }}
-              >
-                <div className="border-wrapper">
-                  <div className="content">
-                    <div className="description-carousal">{slide.description}</div>
-                    <div className="designation">
-                      <div className="logo">
-                        <svg
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle cx="16" cy="16" r="16" fill="#D9D9D9" />
-                        </svg>
-                      </div>
-                      <div className="content-review"> 
-                        <div>{slide.title}</div>
-                        <div>{slide.designation}</div>
-                      </div>
-                    </div>
+      <Slider {...settings}>
+        {carouselDataReview.map((slide, index) => (
+          <div key={index} className="carousel-slide">
+            <div className="border-wrapper">
+              <div className="content">
+                <div className="description-carousal">{slide.description}</div>
+                <div className="designation">
+                  <div className="logo">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="16" cy="16" r="16" fill="#D9D9D9" />
+                    </svg>
+                  </div>
+                  <div className="content-review">
+                    <div>{slide.title}</div>
+                    <div>{slide.designation}</div>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-        <button
-          type="button"
-          onClick={handleNext}
-          className="control-arrow control-next"
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
+        ))}
+      </Slider>
     </div>
   );
 };

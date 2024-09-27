@@ -1,8 +1,8 @@
 .stats-section {
   @include generalFlex(row, center, center);
-  width: 70%;
-  gap: 30px;
-  margin-top: 150px;
+  width: 80%;
+  gap: 10px;
+  margin-top: 200px;
 
   .gradiant-two {
     @include gradiantText(
@@ -15,13 +15,17 @@
   .console-section {
     @include flexRow;
     justify-content: space-around;
-    width: 40%;
+    width: 45%;
+    
     position: relative;
+    left: 0px;
+    bottom: -10px;
     .bg-console {
       position: absolute;
           img{
-            max-width: 250x;
-            max-height: 250px
+            max-width: 380x;
+            max-height: 300px;
+            
           }
       // left: -100px;
     }
@@ -30,12 +34,13 @@
       @include flexCol;
       align-items: flex-start;
       gap: 20px;
-      width: 70%;
+      width: 50%;
       padding-left: 20px;
 
       .bold-heading {
         font-size: 24px;
         font-weight: 700;
+
       }
       .non-bold-heading {
         font-size: 16px;
@@ -52,11 +57,13 @@
     }
     .right {
       @include flexCol;
-      width: 30%;
+      width: 20%;
 
       img {
         width: 150px;
         transform: rotate(15deg);
+        mix-blend-mode: luminosity;
+
       }
     }
   }
@@ -77,10 +84,10 @@
     }
 
     .project-stats {
-      height: 50%;
       @include flexCol;
       padding-left: 10px;
-      height: 120px;
+      width: 100%;
+      height: 140px;
       align-items: flex-start;
       // border: 1px solid;
       // border-image-source: linear-gradient(
@@ -90,6 +97,7 @@
       // );
       // border-image-slice: 1;
       border-radius: 32px;
+      @include transparentBg(32px);
       background: linear-gradient(
         92.98deg,
         rgba(217, 217, 217, 0.07) 32.09%,
@@ -102,8 +110,8 @@
       @include flexCol;
       padding-left: 10px;
       width: 100%;
-      height: 120px;
-      
+      height: 140px;
+      @include transparentBg(32px); 
       align-items: flex-start;
       border-radius: 32px;
       background: linear-gradient(
@@ -123,6 +131,7 @@
 
   .big-stat-container {
     width: 25%;
+    @include transparentBg(32px);
     overflow: hidden;
     @include flexRow;
     align-items: flex-start;
@@ -132,7 +141,7 @@
       rgba(217, 217, 217, 0.07) 32.09%,
       rgba(217, 217, 217, 0.05) 116.98%
     );
-    height: 250px;
+    height: 300px;
     padding-left : 20px;
 
     .big-stat-content {
@@ -204,6 +213,7 @@
       align-items: flex-start;
       padding-left: 20px;
       padding-top: 10px;
+      
     //   border: 1px solid;
     //     border-image-source: linear-gradient(
     //       122.35deg,

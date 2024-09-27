@@ -593,18 +593,18 @@ export default function Home() {
                 Blog for Insights, Tips, and <br className="br-blog-m" /> Innovations in Gaming SDKs!
               </div>
             </div>
-            <div className="bg-blog">
+            {/* <div className="bg-blog">
               <img src={bgImageGaming} alt="bgConsole" />
-            </div>
+            </div> */}
             <CustomCarousel />
           </div>
           <div className="review-section">
             <div className="review-title">
               Valuable <span className="review-gradiant">Reviews</span>
             </div>
-            <div className="bg-review">
+            {/* <div className="bg-review">
               <img src={bgImageGaming} alt="bgConsole" />
-            </div>
+            </div> */}
             <ReviewCarousal />
           </div>
           <div className="community-section">

@@ -190,6 +190,8 @@ body {
     rgba(255, 255, 255, 0.21) 19.78%,
     rgba(255, 255, 255, 0) 187.39%
   );
+  @include transparentBg(32px);    
+
 }
 
 /* Media Query for Mobile Devices */
@@ -439,6 +441,17 @@ body {
   margin-top: 150px;
   width: 80%;
   gap: 20px;
+  background-image: url(/src/assets/Overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  // -webkit-filter: blur(5px);
+  // -moz-filter: blur(5px);
+  // -o-filter: blur(5px);
+  // -ms-filter: blur(5px);
+
+ 
 
   .review-title {
     font-size: 48px;
