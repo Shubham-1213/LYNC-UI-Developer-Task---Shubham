@@ -1,0 +1,67 @@
+.info-section {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    border: 1px solid transparent;
+    border-image-source: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 6.2%,
+      #ffffff 40.5%,
+      rgba(255, 255, 255, 0) 89.56%
+    );
+    border-image-slice: 1;
+    text-align: center;
+  }
+  
+  .information {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  
+  .info-gradient {
+    background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  @media (max-width: 767px) {
+    .info-section {
+      height: auto;
+      padding: 20px 10px;
+    }
+  
+    .information {
+      font-size: 16px;
+      display: none;
+    }
+  
+    .desktop-break {
+      display: none;
+    }
+  
+    .information-mobile::after {
+      content: "LYNC provides a scalable infrastructure\A for launching web3 games without,\A  hampering the gaming experience.\A So that you can deliver the next big hit!";
+      white-space: pre-wrap;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  
+    .information > * {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .info-section{
+      .information{
+        font-size: 24px;  
+      }
+    }
+  }

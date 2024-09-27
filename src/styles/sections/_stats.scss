@@ -15,19 +15,22 @@
   .console-section {
     @include flexRow;
     justify-content: space-around;
-    width: 45%;
-    
+    width: 100%;
     position: relative;
     left: 0px;
     bottom: -10px;
+    height: 300px;
+    background-image: url(/src/assets/Docscard.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
     .bg-console {
       position: absolute;
-          img{
-            max-width: 380x;
-            max-height: 300px;
-            
-          }
-      // left: -100px;
+      img {
+        max-width: 380px;
+        max-height: 300px;
+      }
     }
 
     .left {
@@ -40,7 +43,6 @@
       .bold-heading {
         font-size: 24px;
         font-weight: 700;
-
       }
       .non-bold-heading {
         font-size: 16px;
@@ -55,191 +57,140 @@
         @include flexRow;
       }
     }
+
     .right {
       @include flexCol;
       width: 20%;
-
       img {
         width: 150px;
         transform: rotate(15deg);
         mix-blend-mode: luminosity;
-
       }
     }
   }
 
-  .small-stat-container {
-    @include flexCol;
-    gap: 10px;
-    width: 20%;
-    font-size: 16px;
-    font-weight: 700;
-
-    .gradiant-three {
-      @include gradiantText(
-        $gradiant: linear-gradient(94.68deg, #ff0276 2.51%, #7209b7 56.42%)
-      );
-      font-weight: 900;
-      font-size: 38px;
-    }
-
-    .project-stats {
-      @include flexCol;
-      padding-left: 10px;
-      width: 100%;
-      height: 140px;
-      align-items: flex-start;
-      // border: 1px solid;
-      // border-image-source: linear-gradient(
-      //   122.35deg,
-      //   rgba(255, 255, 255, 0.21) 19.78%,
-      //   rgba(255, 255, 255, 0) 82.63%
-      // );
-      // border-image-slice: 1;
-      border-radius: 32px;
-      @include transparentBg(32px);
-      background: linear-gradient(
-        92.98deg,
-        rgba(217, 217, 217, 0.07) 32.09%,
-        rgba(217, 217, 217, 0.05) 116.98%
-      );
-    }
-
-    .contract-stats {
-
-      @include flexCol;
-      padding-left: 10px;
-      width: 100%;
-      height: 140px;
-      @include transparentBg(32px); 
-      align-items: flex-start;
-      border-radius: 32px;
-      background: linear-gradient(
-        92.98deg,
-        rgba(217, 217, 217, 0.07) 32.09%,
-        rgba(217, 217, 217, 0.05) 116.98%
-      );
-      // border: 1px solid;
-      // border-image-source: linear-gradient(
-      //   122.35deg,
-      //   rgba(255, 255, 255, 0.21) 19.78%,
-      //   rgba(255, 255, 255, 0) 82.63%
-      // );
-      // border-image-slice: 1;
-    }
-  }
-
-  .big-stat-container {
-    width: 25%;
-    @include transparentBg(32px);
-    overflow: hidden;
+  .stat-containers {
     @include flexRow;
-    align-items: flex-start;
-    border-radius: 32px;
-    background: linear-gradient(
-      92.98deg,
-      rgba(217, 217, 217, 0.07) 32.09%,
-      rgba(217, 217, 217, 0.05) 116.98%
-    );
-    height: 300px;
-    padding-left : 20px;
-
-    .big-stat-content {
-        width: 70%;
-        overflow: hidden;
-        font-weight: 700;
-        
-      }
-
-    .big-stat-gif {
-        width: 30%;
-        @include flexCol;
-        align-items: flex;
-        position: relative;
-      img {
-        object-fit: contain;
-        width: 200px;
-        position: absolute;
-        top: 90px;
-        left: -150%;
-      }
-    }
-  }
-}
-@media (max-width: 768px) {
-  .stats-section {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    overflow: hidden;
-
-    .console-section {
-      @include flexCol;
-      width: 100%;
-    }
+    margin-top: 20px;
 
     .small-stat-container {
-      width: 100%;
       @include flexCol;
+      gap: 10px;
+      width: 45%;
+      font-size: 16px;
+      font-weight: 700;
 
-      .project-stats {
-        @include flexCol;
-        align-items: center;
-        width: 90%;
-        align-items: flex-start;
-        border-radius: 32;
-        font-size: 16px;
-        height: 120px;
-        padding-left: 20px;
+      .gradiant-three {
+        @include gradiantText(
+          $gradiant: linear-gradient(94.68deg, #ff0276 2.51%, #7209b7 56.42%)
+        );
+        font-weight: 900;
+        font-size: 38px;
       }
 
-      .contract-stats {
+      .project-stats, .contract-stats {
         @include flexCol;
-        align-items: center;
-        width: 90%;
-        align-items: flex-start;
-        border-radius: 32;
-        font-size: 16px;
-        height: 120px;
         padding-left: 20px;
+        width: 100%;
+        height: 140px;
+        align-items: flex-start;
+        border-radius: 32px;
+        @include transparentBg(32px);
+        background: linear-gradient(
+          92.98deg,
+          rgba(217, 217, 217, 0.07) 32.09%,
+          rgba(217, 217, 217, 0.05) 116.98%
+        );
       }
     }
 
     .big-stat-container {
+      width: 45%;
+      @include transparentBg(32px);
+      overflow: hidden;
       @include flexRow;
-      width: 90%;
-      height: 240px;
-      border-radius: 32px;
       align-items: flex-start;
+      border-radius: 32px;
+      background: linear-gradient(
+        92.98deg,
+        rgba(217, 217, 217, 0.07) 32.09%,
+        rgba(217, 217, 217, 0.05) 116.98%
+      );
+      height: 300px;
       padding-left: 20px;
-      padding-top: 10px;
-      
-    //   border: 1px solid;
-    //     border-image-source: linear-gradient(
-    //       122.35deg,
-    //       rgba(255, 255, 255, 0.21) 19.78%,
-    //       rgba(255, 255, 255, 0) 82.63%
-    //     );
-    //     border-image-slice: 1;
+     
+
       .big-stat-content {
-        width: 60%;
+        width: 70%;
         overflow: hidden;
         font-weight: 700;
-        
+        margin-top: 10px;
       }
 
       .big-stat-gif {
-        width: 40%;
+        width: 30%;
         @include flexCol;
         align-items: flex;
         position: relative;
         img {
-          width: 130%;
+          object-fit: contain;
+          width: 200px;
           position: absolute;
-          top: 55px;
-          left: -20%;
+          top: 90px;
+          left: -150%;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .stats-section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+    
+    .console-section {
+      width: 90%;
+      background-image: url(/src/assets/Docscard.png);
+      padding: 50px;
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: 100% 100%;
+
+      .left{
+        width: 50%;
+        padding: 0;
+
+        .bold-heading {
+          font-size: 24px;
+        }
+        .non-bold-heading {
+          font-size: 16px;
+          color: rgba(117, 117, 117, 1);
+        }
+        // align-items: center;
+        // gap: 10px;
+        // text-align: center;
+      }
+      // display: flex;
+      // align-items: flex-start;
+      
+    }
+
+    .stat-containers {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .small-stat-container,
+    .big-stat-container {
+      width: 80%;
+      align-items: center;
     }
   }
 }

@@ -174,8 +174,8 @@ export default function Home() {
             </div>
             <div className="explain-power">
               LYNC SDKs can be easily integrated into{" "}
-              <br className="explain-power-m-br" /> game engines like Unity 3D{" "}
-              <br className="explain-power-d-br" />
+              <br className="explain-power-m-br" /> game engines like Unity
+              <br className="br-tab" /> 3D <br className="explain-power-d-br" />
               and <br className="explain-power-m-br" />
               Unreal Engine in a few clicks.
             </div>
@@ -185,7 +185,7 @@ export default function Home() {
           </div>
           <div className="complexities-section">
             <div className="bg-image-complexity">
-              <svg
+              {/* <svg
                 width="1104"
                 height="369"
                 viewBox="0 0 1104 369"
@@ -256,7 +256,7 @@ export default function Home() {
                     <stop offset="1" stop-color="white" stop-opacity="0" />
                   </linearGradient>
                 </defs>
-              </svg>
+              </svg> */}
             </div>
             <div className="bg-image-mobile">
               <svg
@@ -463,16 +463,16 @@ export default function Home() {
           </div>
           <div className="stats-section">
             <div className="console-section">
-              <div className="bg-console">
+              {/* <div className="bg-console">
                 <img src={bgConsole} alt="bgConsole" />
-              </div>
+              </div> */}
               <div className="left">
                 <div className="bold-heading">
-                  <div>Elevate Your Gameplay </div>
+                  <div>Elevate Your Gameplay</div>
                   <div>with Essential Insights!</div>
                 </div>
                 <div className="non-bold-text">
-                  <div>Unleash Your Potential - Explore </div>
+                  <div>Unleash Your Potential - Explore</div>
                   <div>the Knowledge Hub Today!</div>
                 </div>
                 <div className="button-stats">
@@ -483,29 +483,31 @@ export default function Home() {
                 <img src={console} alt="card" />
               </div>
             </div>
-            <div className="small-stat-container">
-              <div className="project-stats">
-                <span className="gradiant-two">200+</span>
-                Projects have downloaded and <br className="br-small-stat-m " />
-                integrated LYNC SDKs
-              </div>
-              <div className="contract-stats">
-                <span className="gradiant-three">8000+</span>
-                <span>Contracts have been</span>
-                <span>deployed via LYNC</span>
-              </div>
-            </div>
-            <div className="big-stat-container">
-              <div className="big-stat-content">
-              <span className="gradiant-two">500000+</span>
-                <div>
-                     Users ops created in 10{" "}
-                    <br className="br-big-stat" />
-                    hours
+            <div className="stat-containers">
+              <div className="small-stat-container">
+                <div className="project-stats">
+                  <span className="gradiant-two">200+</span>
+                  Projects have downloaded and{" "}
+                  <br className="br-small-stat-m " />
+                  integrated LYNC SDKs
+                </div>
+                <div className="contract-stats">
+                  <span className="gradiant-three">8000+</span>
+                  <span>Contracts have been</span>
+                  <span>deployed via LYNC</span>
                 </div>
               </div>
-              <div className="big-stat-gif">
-                <img src={secondGif} alt="card" />
+              <div className="big-stat-container">
+                <div className="big-stat-content">
+                  <span className="gradiant-two">500000+</span>
+                  <div>
+                    Users ops created in 10 <br className="br-big-stat" />
+                    hours
+                  </div>
+                </div>
+                <div className="big-stat-gif">
+                  <img src={secondGif} alt="card" />
+                </div>
               </div>
             </div>
           </div>
@@ -514,13 +516,14 @@ export default function Home() {
               Product <span className="product-gradiant">Suite</span>
             </div>
             <div className="product-card-container">
-              <div className="line-one-product">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-              </div>
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
               <div className="bg-product">
-                <svg
+                {/* <svg
                   width="1440"
                   height="1387"
                   viewBox="0 0 1440 1387"
@@ -531,7 +534,7 @@ export default function Home() {
                     <path
                       d="M263.665 847.834C155.771 792.4 283.966 612.304 481.279 527.467C673.629 444.764 655.819 540.894 951.64 631.075C855.677 632.403 1305.27 879.921 1205.99 889.582C1106.71 899.244 735.851 857.72 632.993 855.854C530.135 853.988 371.56 903.267 263.665 847.834Z"
                       fill="#6F00DD"
-                      fill-opacity="0.6"
+                      fillOpacity="0.6"
                     />
                   </g>
                   <defs>
@@ -542,9 +545,9 @@ export default function Home() {
                       width="1987.6"
                       height="1386.69"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -557,12 +560,7 @@ export default function Home() {
                       />
                     </filter>
                   </defs>
-                </svg>
-              </div>
-              <div className="line-two-product">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                </svg> */}
               </div>
             </div>
           </div>
@@ -584,18 +582,20 @@ export default function Home() {
             </div>
           </div>
           <div className="blog-section">
-            <div className="blog-title">
-              From our <span className="blog-gradiant">Blog</span>
-            </div>
-            <div className="blog-content">
-              <div>Level Up Your Web3 Gaming Experience: <br className="br-blog-m" /> Explore Our<br className="br-blog-d" />
-              
-                Blog for Insights, Tips, and <br className="br-blog-m" /> Innovations in Gaming SDKs!
+            <div className="blog-text">
+              <div className="blog-title">
+                From our <span className="blog-gradiant">Blog</span>
+              </div>
+              <div className="blog-content">
+                <div>
+                  Level Up Your Web3 Gaming Experience:{" "}
+                  <br className="br-blog-m" /> Explore Our
+                  <br className="br-blog-d" />
+                  Blog for Insights, Tips, and <br className="br-blog-m" />{" "}
+                  Innovations in Gaming SDKs!
+                </div>
               </div>
             </div>
-            {/* <div className="bg-blog">
-              <img src={bgImageGaming} alt="bgConsole" />
-            </div> */}
             <CustomCarousel />
           </div>
           <div className="review-section">
@@ -633,7 +633,8 @@ export default function Home() {
           </div>
           <div className="partners-section">
             <div className="partners-title">
-              Our <br className="br-partner-m" /><span className="partners-gradiant">Believers and Partners</span>
+              Our <br className="br-partner-m" />
+              <span className="partners-gradiant">Believers and Partners</span>
             </div>
             <div className="bg-partners">
               <img src={bgImageGaming} alt="bgConsole" />

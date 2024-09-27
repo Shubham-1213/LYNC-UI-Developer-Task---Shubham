@@ -1,0 +1,103 @@
+@import "../utils/mixins";
+
+.power-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 100px;
+  position: relative;
+
+  .bg-power {
+    position: absolute;
+    max-width: 500px;
+    max-height: 200px;
+    left: -400px;
+    bottom: 150px;
+  }
+
+  .text-block-power {
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.2;
+
+    .mobile-br {
+      display: none;
+    }
+    .power-up-gradiant {
+      @include gradiantText(
+        $gradiant: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%)
+      );
+    }
+  }
+
+  .explain-power {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    .explain-power-m-br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  // .text-block-power {
+  //   font-size: 36px; // Adjust as needed for mobile
+  //   .mobile-br {
+  //     display: block;
+  //   }
+  // }
+  .power-up {
+    .text-block-power {
+      font-size: 24px;
+    }
+
+    .explain-power {
+      font-size: 16px;
+      text-align: center;
+
+      .explain-power-d-br {
+        display: none;
+      }
+      .explain-power-m-br {
+        display: block;
+      }
+      .br-tab{
+        display: none;
+      }
+    }
+    .bg-power {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .power-up {
+    /* Optional adjustments for the container */
+    // margin-top: 75px; /* Example adjustment for tablet */
+    
+    .text-block-power {
+      font-size: 32px; /* Tablet font size adjustment */
+    }
+    
+    .explain-power {
+      font-size: 18px; /* Tablet font size adjustment */
+      text-align: center; /* Ensures text remains centered on tablet */
+
+      .explain-power-d-br {
+        display: none; /* Hide desktop break */
+      }
+      .explain-power-m-br {
+        display: none; /* Hide mobile break */
+      }
+    }
+  }
+}

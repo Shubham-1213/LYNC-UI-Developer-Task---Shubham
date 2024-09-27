@@ -4,13 +4,17 @@
     @include flexCol;
     margin-top: 150px;
     width: 80%;
-    gap: 20px;
-    background-image: url(/src/assets/Overlay.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: overlay;
+    gap: 50px;
+    // background-image: url(/src/assets/Overlay.png);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-blend-mode: overlay;
    
+    .blog-text{
+        @include flexCol;
+        gap: 10px;        
+    }
   
     .blog-title {
       font-size: 48px;
@@ -36,6 +40,8 @@
       font-size: 24px;
       font-weight: 700;
       text-align: center;
+      color: rgba(218, 221, 216, 1);
+
     }
 
     @media(max-width: 768px){
@@ -51,5 +57,15 @@
         .br-blog-d{
             display: none;
         }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px){
+        .blog-title{
+            font-size: 32px;
+        }
+        .blog-content{
+            font-size: 18px;
+        }
+      
     }
   }

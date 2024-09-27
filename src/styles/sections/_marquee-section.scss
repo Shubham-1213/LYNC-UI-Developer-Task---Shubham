@@ -40,12 +40,19 @@
       width: 90%;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .marquee-title{
             font-size: 24px;
         }
         .bg-marquee{
             display: none;
         }
+    }
+
+    @media screen and  (max-width: 1024px) and (min-width: 768px) {
+        .marquee-title{
+            font-size: 32px;
+        }
+      
     }
   }

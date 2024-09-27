@@ -1,10 +1,11 @@
 import "../styles/components/_navbar.scss";
 import navbarEffect from "../assets/navbar-effect.png";
 import navbarEffect2 from "../assets/navbar-effect-2.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,17 +15,33 @@ export default function Navbar() {
     setMenuOpen(false);
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   return (
   
-    <div className="outer-container">
+    <div className= 'outer-container' >
       <div className="navbar-container">
         <img src={navbarEffect} alt="navbar-effect" />
       </div>
       <div className="navbar-effect-2">
         <img src={navbarEffect2} alt="navbar-effect-2" />
       </div>
-      <div className="main-container">
+      <div className= {`main-container ${isSticky ? 'sticky' : ''}`}>
       <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
           <span className="line"></span>
           <span className="line"></span>

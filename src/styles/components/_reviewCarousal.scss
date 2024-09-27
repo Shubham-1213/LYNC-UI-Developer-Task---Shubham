@@ -4,11 +4,12 @@
   width: 80%;
   position: relative;
   margin: 0 auto;
-  // background-image: url(/src/assets/Overlay.png);
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-blend-mode: overlay;
+  background-image: url(/src/assets/Overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  border-top: 0;
 
   // color: #ffffff;
   overflow: visible;
@@ -90,7 +91,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .custom-carousel {
     padding: 20px 10px;
     width: 100%;
@@ -119,6 +120,41 @@
     .prev-arrow {
       left: -15px;
       z-index: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .custom-carousel {
+    width: 90%; // Adjust the width for tablet screens
+    
+    .carousel-slide {
+      padding: 0 8px; // Slightly reduce padding for better fit
+    }
+    
+    .content {
+      padding: 14px; // Adjust padding if needed
+    }
+    
+    .description-carousal {
+      font-size: 14px; // Slightly smaller font size for descriptions
+    }
+    
+    .designation {
+      margin-top: 16px; // Adjust spacing
+    }
+    
+    .content-review {
+      font-size: 13px; // Adjust font size for reviewer info
+    }
+    
+    // Adjust arrow positions if needed
+    .next-arrow {
+      right: -30px;
+    }
+    
+    .prev-arrow {
+      left: -30px;
     }
   }
 }

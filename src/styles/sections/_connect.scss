@@ -1,0 +1,73 @@
+@import '../utils/mixins';
+
+.connect-section {
+    @include flexCol;
+    width: 80%;
+    margin-top: 200px;
+    height: auto;
+    position: relative;
+  
+    .connect-main {
+      @include flexCol;
+      position: absolute;
+      bottom: -140px;
+      gap: 30px;
+    }
+  
+    .connect-content {
+      @include flexCol;
+    }
+    .Idea {
+      font-size: 48px;
+      font-weight: 900;
+      @include flexCol;
+    }
+  
+    .Together {
+      font-size: 48px;
+      font-weight: 900;
+      @include flexCol;
+    }
+  
+    .get-started-connect {
+      background: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%);
+      border-radius: 20px;
+      width: 160px;
+      height: 40px;
+      @include flexRow;
+      justify-content: space-around;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  
+    @media (max-width: 768px) {
+      .connect-section {
+        margin-top: 100px;
+      }
+      .lync-logo{
+        img{
+          max-width: 300px;
+          max-height: 300px;
+        }
+      }
+      .connect-main {
+        position: relative;
+        bottom: 0;
+        gap: 20px;
+      }
+  
+      .Idea {
+        font-size: 24px;
+      }
+  
+      .Together {
+        font-size: 24px;
+      }
+  
+      .get-started-connect {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+  }

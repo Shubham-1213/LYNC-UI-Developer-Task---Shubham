@@ -1,0 +1,56 @@
+@import '../utils/mixins';
+
+.review-section {
+    @include flexCol;
+    margin-top: 150px;
+    width: 80%;
+    gap: 20px;
+ 
+    // -webkit-filter: blur(5px);
+    // -moz-filter: blur(5px);
+    // -o-filter: blur(5px);
+    // -ms-filter: blur(5px);
+  
+   
+  
+    .review-title {
+      font-size: 48px;
+      font-weight: 900;
+  
+      .review-gradiant {
+        @include gradiantText(
+          $gradiant: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%)
+        );
+      }
+    }
+  
+    .bg-review {
+      position: absolute;
+      z-index: -1;
+    }
+  
+    .review-content {
+      @include flexCol;
+      font-size: 24px;
+      font-weight: 700;
+  
+      .bg-review {
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .review-title {
+      font-size: 24px;
+    }  
+  }
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .review-section {
+      .review-title {
+        font-size: 32px;
+      }
+    }
+    
+  }
