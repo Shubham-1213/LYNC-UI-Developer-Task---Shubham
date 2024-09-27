@@ -206,9 +206,10 @@
   .stats-section{
     width: 90%;
     @include flexCol;
+    margin-top: 50px;
 
     .console-section{
-      width: 90%;
+      width: 85%;
       .left{
         width: 70%;
         .bold-heading{
