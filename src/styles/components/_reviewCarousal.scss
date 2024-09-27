@@ -93,12 +93,8 @@
 
 @media (max-width: 767px) {
   .custom-carousel {
-    padding: 20px 10px;
     width: 100%;
 
-    .content {
-      padding: 16px;
-    }
 
     .designation {
       flex-direction: column;
@@ -128,13 +124,7 @@
   .custom-carousel {
     width: 90%; // Adjust the width for tablet screens
     
-    .carousel-slide {
-      padding: 0 8px; // Slightly reduce padding for better fit
-    }
     
-    .content {
-      padding: 14px; // Adjust padding if needed
-    }
     
     .description-carousal {
       font-size: 14px; // Slightly smaller font size for descriptions

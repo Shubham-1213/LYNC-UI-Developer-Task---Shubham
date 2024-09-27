@@ -47,6 +47,8 @@
       .non-bold-heading {
         font-size: 16px;
         font-weight: 500;
+        color: rgba(141, 150, 178, 1);
+
       }
       .button-stats {
         background-color: white;
@@ -103,6 +105,7 @@
           rgba(217, 217, 217, 0.07) 32.09%,
           rgba(217, 217, 217, 0.05) 116.98%
         );
+        color: rgba(141, 150, 178, 1);
       }
     }
 
@@ -127,6 +130,8 @@
         overflow: hidden;
         font-weight: 700;
         margin-top: 10px;
+        color: rgba(141, 150, 178, 1);
+
       }
 
       .big-stat-gif {
@@ -191,6 +196,57 @@
     .big-stat-container {
       width: 80%;
       align-items: center;
+      color: rgba(117, 117, 117, 1);
+      
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .stats-section{
+    width: 90%;
+    @include flexCol;
+
+    .console-section{
+      width: 90%;
+      .left{
+        width: 70%;
+        .bold-heading{
+          font-size: 16px;
+        }
+        .non-bold-heading{
+          font-size: 10px;
+        }
+      }
+      .right{
+        img{
+          width: 100px;
+        }
+      }
+    }
+
+    .stat-containers{
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+
+      .small-stat-container{
+        width: 90%;
+        .project-stats, .contract-stats{
+          height: 100px;
+          padding: 10px;
+        }
+      }
+      .big-stat-container{
+        width: 90%;
+        height: 250px;
+        padding: 10px;
+        .big-stat-content{
+          width: 100%;
+          font-size: 16px;
+        }
+  
+      }
     }
   }
 }
