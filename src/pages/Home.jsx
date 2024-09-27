@@ -32,7 +32,7 @@ import ReviewCarousal from "../components/ReviewCarousal";
 import community from "../assets/community.png";
 import lyncLogo from "../assets/LYNCLogo.png";
 import Footer from "../components/Footer";
-import floorPattern from "../assets/floor-pattern.png";
+import floorPattern from "../assets/Floor-pattern.png";
 import bgHero from "../assets/bg-image.png";
 const brandImages1 = [
   { src: "/src/assets/APTOS.png", alt: "Brand 1" },
