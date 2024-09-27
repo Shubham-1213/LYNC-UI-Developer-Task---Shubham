@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "../styles/components/_carousal.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import carousalImage from "../assets/carousal.png";
 
 const carouselData = [
   {
@@ -94,7 +95,7 @@ const CustomCarousel = () => {
             <div className="border-wrapper">
               <div className="content">
                 <img
-                  src="/src/assets/carousal.png"
+                  src={carousalImage}
                   alt="LYNC x ASTAR"
                   className="carousel-image"
                 />

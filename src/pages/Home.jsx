@@ -34,29 +34,35 @@ import lyncLogo from "../assets/LYNCLogo.png";
 import Footer from "../components/Footer";
 import floorPattern from "../assets/Floor-pattern.png";
 import bgHero from "../assets/bg-image.png";
+import chainlink from "../assets/chainlink.png";
+import spheron from "../assets/spheron.png";
+import biconomy from "../assets/biconomy.png";
+import lighthouse from "../assets/lighthouse.png";
+import saus from "../assets/saus.png";
+
 const brandImages1 = [
-  { src: "/src/assets/APTOS.png", alt: "Brand 1" },
-  { src: "/src/assets/astar.png", alt: "Brand 2" },
-  { src: "/src/assets/avalanche.png", alt: "Brand 3" },
-  { src: "/src/assets/ethereum.png", alt: "Brand 4" },
+  { src: aptos, alt: "Brand 1" },
+  { src: astar, alt: "Brand 2" },
+  { src: avalanche, alt: "Brand 3" },
+  { src: ethereum, alt: "Brand 4" },
 ];
 
 const brandImages2 = [
-  { src: "/src/assets/polygon.png", alt: "Brand 5" },
-  { src: "/src/assets/saga.png", alt: "Brand 6" },
-  { src: "/src/assets/zySync.png", alt: "Brand 7" },
-  { src: "/src/assets/shardeum.png", alt: "Brand 8" },
+  { src: polygon, alt: "Brand 5" },
+  { src: saga, alt: "Brand 6" },
+  { src: zysync, alt: "Brand 7" },
+  { src: shardeum, alt: "Brand 8" },
 ];
 
 const partnersData = [
-  { name: "Filecoin", logo: "/src/assets/filecoin.png" },
-  { name: "Chainlink", logo: "/src/assets/chainlink.png" },
-  { name: "Spheron", logo: "/src/assets/spheron.png" },
-  { name: "LongHash X", logo: "/src/assets/sponser1.png" },
-  { name: "Axelar", logo: "/src/assets/sponser2.png" },
-  { name: "Biconomy", logo: "/src/assets/biconomy.png" },
-  { name: "Lighthouse", logo: "/src/assets/lighthouse.png" },
-  { name: "Saus", logo: "/src/assets/saus.png" },
+  { name: "Filecoin", logo: sponser1 },
+  { name: "Chainlink", logo: chainlink },
+  { name: "Spheron", logo: spheron },
+  { name: "LongHash X", logo: sponser1 },
+  { name: "Axelar", logo: sponser2 },
+  { name: "Biconomy", logo: biconomy },
+  { name: "Lighthouse", logo: lighthouse },
+  { name: "Saus", logo: saus },
 ];
 export default function Home() {
   return (
