@@ -15,6 +15,21 @@ export default function Navbar() {
     setMenuOpen(false);
   }
 
+  const scrollToTop = () => {
+    console.log("Scroll to top clicked"); // Debug log
+    if ('scrollBehavior' in document.documentElement.style) {
+      // Smooth scroll for modern browsers
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback for older browsers
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -51,10 +66,12 @@ export default function Navbar() {
           viewBox="0 0 39 26"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={scrollToTop}
+          style={{ cursor: 'pointer' }}
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M23.8942 14.2727C23.2618 20.025 18.3936 24.4999 12.4818 24.4999C6.1406 24.4999 1 19.3512 1 12.9999C1 6.6487 6.1406 1.5 12.4818 1.5C15.5119 1.5 18.2678 2.67556 20.3197 4.59617H16.8442V5.56185C15.5649 4.80748 14.0738 4.3748 12.4818 4.3748C7.72585 4.3748 3.8704 8.23632 3.8704 12.9998C3.8704 17.7632 7.72585 21.6247 12.4818 21.6247C16.8059 21.6247 20.3857 18.4325 21 14.2727H23.8942Z"
             fill="white"
           />
@@ -63,8 +80,8 @@ export default function Navbar() {
             fill="white"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M20.3225 22.629C22.1271 23.8121 24.2846 24.5 26.6024 24.5C32.9437 24.5 38.0843 19.3513 38.0843 13.0001C38.0843 6.64881 32.9437 1.50011 26.6024 1.50011C20.2612 1.50011 15.1206 6.64881 15.1206 13.0001C15.1206 13.0373 15.1208 13.0744 15.1211 13.1116L17.9918 13.1116C17.9914 13.0745 17.9911 13.0374 17.9911 13.0002C17.9911 8.23681 21.8466 4.37528 26.6025 4.37528C31.3584 4.37528 35.2139 8.23681 35.2139 13.0002C35.2139 17.7637 31.3584 21.6252 26.6025 21.6252C24.1259 21.6252 21.8934 20.578 20.3225 18.9017V22.629Z"
             fill="white"
           />
@@ -79,7 +96,7 @@ export default function Navbar() {
           <div className="page">Blogs</div>
           <div className="page">LYNC Portal</div>
           <div className="page">Request Demo</div>
-          <div className={`page ${menuOpen ? "open" : ""}`} onClick={handleClose}>Close</div>
+          <div className={`page ${menuOpen ? "open" : "close"}`} onClick={handleClose}>Close</div>
         </div>
         <div className="button-container">
           <div className="button">Get Started</div>

@@ -7,6 +7,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
+
 export default function Footer() {
   return (
     <footer className="footer-section">
@@ -108,6 +109,9 @@ export default function Footer() {
         <p>
           &copy; 2024 LYNC World &bull; <a href="#">Terms of service</a>
         </p>
+        {/* <div className="footer-blur">
+           <img src={}
+        </div> */}
       </div>
     </footer>
   );

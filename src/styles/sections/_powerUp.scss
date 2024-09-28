@@ -29,6 +29,7 @@
     .mobile-br {
       display: none;
     }
+   
     .power-up-gradiant {
       @include gradiantText(
         $gradiant: linear-gradient(205.14deg, #3f37c9 30.04%, #4cc9f0 186.57%)
@@ -45,6 +46,9 @@
     font-weight: 600;
     text-align: center;
     .explain-power-m-br {
+      display: none;
+    }
+    .br-tab{
       display: none;
     }
   }

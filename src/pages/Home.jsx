@@ -41,6 +41,7 @@ import lighthouse from "../assets/lighthouse.png";
 import saus from "../assets/saus.png";
 import bgVectorBlur from '../assets/blurr-vector.png';
 import floorPatternT from "../assets/floor-pattern-t.png";
+import polygonLogo from "../assets/polygon-logo.png";
 
 const brandImages1 = [
   { src: aptos, alt: "Brand 1" },
@@ -50,7 +51,7 @@ const brandImages1 = [
 ];
 
 const brandImages2 = [
-  { src: polygon, alt: "Brand 5" },
+  { src: polygonLogo, alt: "Brand 5" },
   { src: saga, alt: "Brand 6" },
   { src: zysync, alt: "Brand 7" },
   { src: shardeum, alt: "Brand 8" },
@@ -82,8 +83,6 @@ export default function Home() {
               <div>
                 We help game developers to launch their game on Web 3.0, by
                 keeping
-              </div>
-              <div className="second-line">
                 blockchain complexities aside with WebWorld SDKs!
               </div>
             </div>
@@ -658,6 +657,9 @@ export default function Home() {
             </div>
             <div className="bg-partners">
               <img src={bgImageGaming} alt="bgConsole" />
+            </div>
+            <div className="blur-vector-partner">
+                <img src={bgVectorBlur} alt="bgVectorBlur"/>
             </div>
             <div className="grid">
               {partnersData.map((partner, index) => (

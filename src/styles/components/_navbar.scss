@@ -1,3 +1,5 @@
+@import '../utils/mixins';
+
 .outer-container {
   display: flex;
   flex-direction: column;
@@ -47,7 +49,7 @@
     font-weight: 700;
     color: white;
     font-size: 16px;
-    border-radius: 48px;
+    @include transparentBg(32px);
     position: relative;
 
     &.sticky {
@@ -106,6 +108,12 @@
     .link-container {
       display: flex;
       gap: 30px;
+
+      .page{
+        &.close{
+          display: none;
+        }
+      }
     }
 
     .button-container {

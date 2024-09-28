@@ -3,8 +3,13 @@
 .community-section {
     @include flexCol;
     margin-top: 350px;
-    width: 80%;
+    width: 100%;
     gap: 20px;
+    // // padding: 15%;
+    // background-image: url(/src/assets/Overlay.png);
+    // background-size: 200% 200%;
+    // background-position: center;
+    // background-repeat: no-repeat;
   
     .community-title {
       font-size: 48px;
