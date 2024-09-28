@@ -84,13 +84,13 @@
     .bgVectorBlurPower{
       display: block;
       position: absolute;
-      filter: blur(150px);
+      filter: blur(200px);
       top: 40px;
       z-index: -1;
       // max-width: 100px;
       object-position: center;
         img{
-          width: 100%;
+          width: 90%;
           height: 40vh;
         }
     }

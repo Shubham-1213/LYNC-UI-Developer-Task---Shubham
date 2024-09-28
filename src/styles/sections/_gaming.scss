@@ -68,9 +68,9 @@
      .bgVectorBlur{
       display: block; /* Show only on mobile */
       position: absolute;
-      filter: blur(150px);
+      filter: blur(200px);
       z-index: -1;
-      width: 100%; /* Ensure it covers the full width */
+      width: 90%; /* Ensure it covers the full width */
       height: 50vh; /* Use viewport height for responsive sizing */
       object-fit: cover; 
         img{

@@ -588,6 +588,9 @@ export default function Home() {
             <div className="bg-marquee">
               <img src={bgImageGaming} alt="bgMarquee" />
             </div>
+            <div className="bgBlurMarquee">
+                <img src={bgVectorBlur} alt="bgVectorBlur"/>
+            </div>
             <div className="actual-marquee">
               <div className="first-marquee">
                 <MarqueeComponent images1={brandImages1} direction="left" />
