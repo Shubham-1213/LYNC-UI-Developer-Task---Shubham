@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Scale } from "lucide-react";
 import Slider from "react-slick";
 import "../styles/components/_carousal.scss";
 import "slick-carousel/slick/slick.css";
@@ -98,6 +98,7 @@ const CustomCarousel = () => {
                   src={carousalImage}
                   alt="LYNC x ASTAR"
                   className="carousel-image"
+                  style={{ transform: 'scale(1.01)' }}
                 />
                 <div className="text-content">
                   <h3>{slide.title}</h3>

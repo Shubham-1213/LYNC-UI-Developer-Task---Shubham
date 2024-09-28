@@ -12,13 +12,14 @@
 .complexities-section {
   margin-top: 150px;
   @include flexCol;
-  width: 70%;
+  width: 75%;
   background-image: url(/src/assets/Card.png) !important;
   gap: 30px;
   border-radius: 48px;
   padding: 45px;
   position: relative;
-  background-size: cover;
+  background-repeat: no-repeat;
+  // background-size: cover;
   // @media screen and (max-width: 767px) {
   //   background-image: none;
   // }
@@ -43,7 +44,7 @@
     max-width: 100px;
     max-height: 100px;
     position: absolute;
-    right: 280px;
+    right: 310px;
     top: -60px;
     animation: bounce 2s ease-in-out infinite;
   }
@@ -75,10 +76,11 @@
       gap: 20px;
       font-size: 16px;
       background-image: none !important;  
+      width: 100%;
     }
     .complexities-section {
       @include flexCol;
-      width: 90%;
+      
       
     }
     
@@ -86,6 +88,9 @@
       display: block;
       position: absolute;
       object-position: center;
+      max-width: 90%;
+      margin-right: 20px;
+      
     }
     .header-complexity {
       flex-direction: column;

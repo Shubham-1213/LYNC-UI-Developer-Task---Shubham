@@ -5,11 +5,11 @@
     margin-top: 150px;
     width: 80%;
     gap: 50px;
-    // background-image: url(/src/assets/Overlay.png);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-blend-mode: overlay;
+    background-image: url(/src/assets/Overlay.png);
+    background-size: cover;
+    backdrop-filter: blur(250px);
+    background-blend-mode: overlay;
+    border-top: 0;
    
     .blog-text{
         @include flexCol;

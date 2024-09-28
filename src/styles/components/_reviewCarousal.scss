@@ -4,12 +4,7 @@
   width: 80%;
   position: relative;
   margin: 0 auto;
-  background-image: url(/src/assets/Overlay.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: overlay;
-  border-top: 0;
+
 
   // color: #ffffff;
   overflow: visible;
@@ -33,7 +28,7 @@
 
   .description-carousal {
     background: rgba(2, 6, 23, 1);
-    padding: 10px;
+    padding: 20px;
   }
 
   .designation {
@@ -41,8 +36,10 @@
     // width: 100%;
     align-items: center;
     margin-top: 20px;
-    padding-left  : 10px;
+    padding-left  : 20px;
     padding-bottom: 20px;
+    // @include transparentBg(12px);
+    border-top: 0;
     // background: linear-gradient(
     //   92.98deg,
     //   rgba(217, 217, 217, 0.07) 32.09%,
@@ -94,11 +91,14 @@
 @media (max-width: 767px) {
   .custom-carousel {
     width: 100%;
-
+    .description-carousal{
+      padding: 25px;
+    }
 
     .designation {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
+      padding-left: 20px;
     }
 
     .logo {

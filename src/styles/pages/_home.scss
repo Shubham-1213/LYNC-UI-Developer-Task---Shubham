@@ -21,11 +21,17 @@
   justify-content: center;
 }
 
-body {
-  background-color: $primary-color;
+*
+{
   margin: 0;
   padding: 0;
-  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+ 
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -126,9 +132,14 @@ body {
 @media (max-width: 767px) {
   .bg-image-container {
     font-size: 36px;
-    padding: 20px 10px;
+    overflow: hidden;
+    
      img{
-       display: none;
+       display: block;
+       position: absolute;
+        transform: scale(0.4);
+        max-width: 300%;
+        top: -20%;
      } /* Keeps the focus of the image in the center */
   }
 
@@ -168,8 +179,10 @@ body {
 @media screen and (max-width : 1024px) and (min-width: 768px) {
    .bg-image-container{
      font-size: 68px;
+     overflow: hidden;
      img{
-        max-height: 500px;
+        display: block;
+        transform: scale(0.8);
      }
 
      .tagline-hero{
@@ -191,18 +204,38 @@ body {
   .footer-pattern {
     position: absolute;
   }
-
-  @media (max-width: 768px) {
-    .footer-container-home{
-      position: relative;
-    }
+  .footer-pattern-t{
+    display: none;
+    position: absolute;
+  }
+}
+@media (max-width: 767px) {
+  .footer-container-home{
+    position: relative;
+    overflow-x: hidden;
     .footer-pattern {
-      position: absolute;
-       img{
-        max-width: 400px;
-        max-height: 400px;
-       }
+      display: none;
+    }
+    .footer-pattern-t{
+      display: block;
+      transform: scale(0.5);
+      top: -150px;
+      left: -300px;
+
     }
   }
+}
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .footer-container-home{
+    overflow: hidden;
+    .footer-pattern {
+      display: block;
+      position: absolute;
+      left: -300px;
+    }
+    .footer-pattern-t{
+      display: none;
+    }
+  }
 }

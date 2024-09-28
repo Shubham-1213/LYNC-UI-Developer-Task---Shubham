@@ -40,6 +40,7 @@ import biconomy from "../assets/biconomy.png";
 import lighthouse from "../assets/lighthouse.png";
 import saus from "../assets/saus.png";
 import bgVectorBlur from '../assets/blurr-vector.png';
+import floorPatternT from "../assets/floor-pattern-t.png";
 
 const brandImages1 = [
   { src: aptos, alt: "Brand 1" },
@@ -512,7 +513,7 @@ export default function Home() {
               </div>
               <div className="big-stat-container">
                 <div className="big-stat-content">
-                  <span className="gradiant-two">500000+</span>
+                  <span className="gradiant-two">50000+</span>
                   <div>
                     Users ops created in 10 <br className="br-big-stat" />
                     hours
@@ -695,6 +696,9 @@ export default function Home() {
           <div className="footer-container-home">
             <div className="footer-pattern">
               <img src={floorPattern} alt="floor-pattern" />
+            </div>
+            <div className="footer-pattern-t">
+              <img src={floorPatternT} alt="floor-pattern" />
             </div>
             <Footer />
           </div>

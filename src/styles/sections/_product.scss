@@ -1,9 +1,10 @@
 @import '../utils/mixins';
 
 .product-section {
-  width: 100%;
+  width: 80%;
   @include flexCol;
   margin-top: 150px;
+   align-items: center;
   
   .product-title {
     font-size: 48px;
@@ -24,9 +25,10 @@
     display: grid;
     width: 80%;
     position: relative;
-    gap: 20px;
+    gap: 40px;
     grid-template-columns: repeat(3, 1fr); // 3 cards per row for desktop
-    grid-template-rows: repeat(2, auto); // 2 rows for desktop
+    grid-template-rows: repeat(2, auto); 
+    justify-content: center;// 2 rows for desktop
   
     .bg-product {
       position: absolute;
@@ -52,7 +54,8 @@
     .bgVectorBlurProduct {
       display: block;
       position: absolute;
-      filter: blur(200px);
+      // backdrop-filter: blur(495.79998779296875px);
+      filter: blur(300px);
       z-index: -1;  
       img {
         width: 100%;
